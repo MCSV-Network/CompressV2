@@ -1,1 +1,15 @@
-#なにもないです
+#CompressV2
+#by ringo360xd
+
+Variables:
+	{cpv2.prefix} = "&b[&6COMPRESS-V2&b]&r"
+
+command /compressv2 [<text>]:
+	permission: admin
+	trigger:
+		if arg-1 is not set:
+			close player's inventory
+			play sound "block.note_block.bass" to player
+			send "%{cpv2.prefix}% &c圧縮したいアイテムを選んでください!"
+			send "&e使用方法: &a/compressv2 &d<アイテム名>"
+			stop
