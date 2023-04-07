@@ -18,47 +18,47 @@ command /compressv2 [<text>]:
 
 
 function cpv2check(p: player):
-	send "&7インベントリをチェック中..."
+	send "&7インベントリをチェック中..." to {_p}
 	loop 36 times:
 		add 1 to {_slot}
-		if slot {_n} of {_p}'s inventory is 64 of rotten_flesh:
-			set slot {_n} of {_p}'s inventory to air
-			set slot {_n} of {_p}'s inventory to sunflower
+		if slot {_slot} of {_p}'s inventory is 64 of rotten_flesh:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.rotten_flesh}
 			add 1 to {_compressv2.counter}
-		if slot {_n} of {_p}'s inventory is 64 of bone:
-			set slot {_n} of {_p}'s inventory to air
-			set slot {_n} of {_p}'s inventory to sunflower
+		if slot {_slot} of {_p}'s inventory is 64 of bone:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.bone}
 			add 1 to {_compressv2.counter}
-		if slot {_n} of {_p}'s inventory is 64 of arrow:
-			set slot {_n} of {_p}'s inventory to air
-			set slot {_n} of {_p}'s inventory to sunflower
+		if slot {_slot} of {_p}'s inventory is 64 of arrow:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.arrow}
 			add 1 to {_compressv2.counter}
-		if slot {_n} of {_p}'s inventory is 64 of gunpowder:
-			set slot {_n} of {_p}'s inventory to air
-			set slot {_n} of {_p}'s inventory to sunflower
+		if slot {_slot} of {_p}'s inventory is 64 of gunpowder:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.gunpowder}
 			add 1 to {_compressv2.counter}
 		
-#		if slot {_n} of {_p}'s inventory is 64 of rotten_flesh:
-#			set slot {_n} of {_p}'s inventory to air
-#			set slot {_n} of {_p}'s inventory to sunflower
+#		if slot {_slot} of {_p}'s inventory is 64 of rotten_flesh:
+#			set slot {_slot} of {_p}'s inventory to air
+#			set slot {_slot} of {_p}'s inventory to sunflower
 #			add 1 to {_compressed.rotten_flesh}
 #			add 1 to {_compressv2.counter}
-#		if slot {_n} of {_p}'s inventory is 64 of bone:
-#			set slot {_n} of {_p}'s inventory to air
-#			set slot {_n} of {_p}'s inventory to sunflower
+#		if slot {_slot} of {_p}'s inventory is 64 of bone:
+#			set slot {_slot} of {_p}'s inventory to air
+#			set slot {_slot} of {_p}'s inventory to sunflower
 #			add 1 to {_compressed.bone}
 #			add 1 to {_compressv2.counter}
-#		if slot {_n} of {_p}'s inventory is 64 of arrow:
-#			set slot {_n} of {_p}'s inventory to air
-#			set slot {_n} of {_p}'s inventory to sunflower
+#		if slot {_slot} of {_p}'s inventory is 64 of arrow:
+#			set slot {_slot} of {_p}'s inventory to air
+#			set slot {_slot} of {_p}'s inventory to sunflower
 #			add 1 to {_compressed.arrow}
 #			add 1 to {_compressv2.counter}
-#		if slot {_n} of {_p}'s inventory is 64 of gunpowder:
-#			set slot {_n} of {_p}'s inventory to air
-#			set slot {_n} of {_p}'s inventory to sunflower
+#		if slot {_slot} of {_p}'s inventory is 64 of gunpowder:
+#			set slot {_slot} of {_p}'s inventory to air
+#			set slot {_slot} of {_p}'s inventory to sunflower
 #			add 1 to {_compressed.gunpowder}
 #			add 1 to {_compressv2.counter}
