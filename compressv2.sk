@@ -21,10 +21,10 @@ function cpv2check(p: player):
 	send "&7インベントリをチェック中..." to {_p}
 	loop 36 times:
 		add 1 to {_slot}
-		if slot {_slot} of {_p}'s inventory is 64 of rotten_flesh:
+		if slot {_slot} of {_p}'s inventory is 64 of rotten flesh:
 			set slot {_slot} of {_p}'s inventory to air
 			set slot {_slot} of {_p}'s inventory to sunflower
-			add 1 to {_compressed.rotten_flesh}
+			add 1 to {_compressed.rottenflesh}
 			add 1 to {_compressv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of bone:
 			set slot {_slot} of {_p}'s inventory to air
