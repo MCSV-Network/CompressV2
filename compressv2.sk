@@ -24,7 +24,7 @@ function cpv2check(p: player):
 		if slot {_slot} of {_p}'s inventory is 64 of rotten flesh:
 			set slot {_slot} of {_p}'s inventory to air
 			set slot {_slot} of {_p}'s inventory to sunflower
-			add 1 to {_compressed.rottenflesh}
+			add 1 to {_compressed.rotten_flesh}
 			add 1 to {_compressv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of bone:
 			set slot {_slot} of {_p}'s inventory to air
@@ -41,24 +41,63 @@ function cpv2check(p: player):
 			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.gunpowder}
 			add 1 to {_compressv2.counter}
-		
-#		if slot {_slot} of {_p}'s inventory is 64 of rotten_flesh:
-#			set slot {_slot} of {_p}'s inventory to air
-#			set slot {_slot} of {_p}'s inventory to sunflower
-#			add 1 to {_compressed.rotten_flesh}
-#			add 1 to {_compressv2.counter}
-#		if slot {_slot} of {_p}'s inventory is 64 of bone:
-#			set slot {_slot} of {_p}'s inventory to air
-#			set slot {_slot} of {_p}'s inventory to sunflower
-#			add 1 to {_compressed.bone}
-#			add 1 to {_compressv2.counter}
-#		if slot {_slot} of {_p}'s inventory is 64 of arrow:
-#			set slot {_slot} of {_p}'s inventory to air
-#			set slot {_slot} of {_p}'s inventory to sunflower
-#			add 1 to {_compressed.arrow}
-#			add 1 to {_compressv2.counter}
-#		if slot {_slot} of {_p}'s inventory is 64 of gunpowder:
-#			set slot {_slot} of {_p}'s inventory to air
-#			set slot {_slot} of {_p}'s inventory to sunflower
-#			add 1 to {_compressed.gunpowder}
-#			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of spider eye:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.spider_eye}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of string:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.string}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of ender pearl:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.ender_pearl}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of magma cream:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.magma_cream}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of blaze rod:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.blaze_rod}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of slime ball:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.slime_ball}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of andesite:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.andesite}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of cobbled deepslate:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.cobbled_deepslate}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of deepslate:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.deepslate}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of diorite:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.diorite}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of dirt:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.dirt}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of grass block:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.grass_block}
+			add 1 to {_compressv2.counter}
