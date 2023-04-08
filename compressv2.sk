@@ -101,3 +101,45 @@ function cpv2check(p: player):
 			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.grass_block}
 			add 1 to {_compressv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of gravel:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.gravel}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of granite:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.granite}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of netherrack:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.netherrack}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of sand:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.sand}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of sandstone:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.sandstone}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of stone:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.stone}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of cobblestone:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.cobblestone}
+			add 1 to {_compressv2.counter}
+		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+			set slot {_slot} of {_p}'s inventory to air
+			set slot {_slot} of {_p}'s inventory to sunflower
+			add 1 to {_compressed.tuff}
+			add 1 to {_compressv2.counter}
