@@ -2,7 +2,7 @@
 #by ringo360xd
 
 Variables:
-	{cpv2.prefix} = "&b[&6COMPRESS-V2&b]&r"
+	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 
 command /compressv2 [<text>]:
 	permission: admin
@@ -18,7 +18,7 @@ command /compressv2 [<text>]:
 
 
 function cpv2check(p: player):
-	send "&7インベントリをチェック中..." to {_p}
+	send "%{cpv2.prefix}% &7インベントリをチェック中..." to {_p}
 	loop 36 times:
 		add 1 to {_slot}
 		if slot {_slot} of {_p}'s inventory is 64 of rotten flesh:
@@ -101,8 +101,6 @@ function cpv2check(p: player):
 			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.grass_block}
 			add 1 to {_compressv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of gravel:
 			set slot {_slot} of {_p}'s inventory to air
 			set slot {_slot} of {_p}'s inventory to sunflower
@@ -143,3 +141,6 @@ function cpv2check(p: player):
 			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.tuff}
 			add 1 to {_compressv2.counter}
+		wait a tick
+	
+	if {_compressv2.counter} is 0:
