@@ -1,22 +1,27 @@
 #CompressV2
 #by ringo360xd
 
+#定義づけ(prefix)
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
-
+#======================
+#インベントリロック
 on drop:
 	if {cpv2.invlock.%player%} is true:
 		send "&c圧縮中のため、インベントリはロックされています!"
 		send "&7圧縮をしていないのにこのメッセージが表示される場合は"
 		send "一度&a/compressv2 all&7を実行してみてください。"
 		cancel event
-
 on inventory click:
 	if {cpv2.invlock.%player%} is true:
 		send "&c圧縮中のため、インベントリはロックされています!"
 		send "&7圧縮をしていないのにこのメッセージが表示される場合は"
 		send "一度&a/compressv2 all&7を実行してみてください。"
 		cancel event
+#======================
+
+
+#compressV2
 command /compressv2 [<text>]:
 	permission: admin
 	trigger:
@@ -29,6 +34,8 @@ command /compressv2 [<text>]:
 		if arg-1 is "all":
 			cpv2checkall(player)
 
+
+#compress allのfunction
 function cpv2checkall(p: player):
 	#何も設定しない方が楽だけどバグるみたいなので0に設定
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
@@ -211,7 +218,8 @@ function cpv2checkall(p: player):
 			add 1 to {_cpv2.counter}
 		wait a tick
 	
-	send "count: %{_cpv2.counter}%" to {_p}
+	send "&7[debug] count: %{_cpv2.counter}%" to {_p}
+	#
 	if {_cpv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
 	
