@@ -27,9 +27,9 @@ command /compressv2 [<text>]:
 			send "&e使用方法: &a/compressv2 &d<アイテム名>"
 			stop
 		if arg-1 is "all":
-			cpv2check(player)
+			cpv2checkall(player)
 
-function cpv2check(p: player):
+function cpv2checkall(p: player):
 	#何も設定しない方が楽だけどバグるみたいなので0に設定
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
 	set {_compressed.rotten_flesh} to 0
