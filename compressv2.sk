@@ -183,7 +183,8 @@ function cpv2check(p: player):
 
 		if {_compressed.rotten_flesh} is not 0:
 			send "&e腐った肉: &d%{_compressed.rotten_flesh}%st" to {_p}
-
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.rotten_flesh} of {_item} to {_p}'s inventory
 		if {_compressed.bone} is not 0:
 			send "&e骨: &d%{_compressed.bone}%st" to {_p}
 		if {_compressed.arrow} is not 0:
@@ -198,7 +199,6 @@ function cpv2check(p: player):
 			send "&eエンダーパール: &d%{_compressed.ender_pearl}%st" to {_p}
 		if {_compressed.magma_cream} is not 0:
 			send "&eマグマクリーム: &d%{_compressed.magma_cream}%st" to {_p}
-
 		if {_compressed.blaze_rod} is not 0:
 			send "&eブレイズロッド: &d%{_compressed.blaze_rod}%st" to {_p}
 		if {_compressed.slime_ball} is not 0:
