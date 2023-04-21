@@ -144,11 +144,11 @@ function cpv2check(p: player):
 		wait a tick
 	
 	if {_compressv2.counter} is 0:
-		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!"
+		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
 	
 	if {_compressv2.counter} >= 1:
-		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!"
-		send "&7==&b圧縮されたアイテムの内容&7=="
+		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
+		send "&7==&b圧縮されたアイテムの内容&7==" to {_p}
 
 		if {_compressed.rotten_flesh} is not 0:
 			send "&e腐った肉: &d%{_compressed.rotten_flesh}%st" to {_p}
@@ -172,32 +172,32 @@ function cpv2check(p: player):
 		if {_compressed.slime_ball} is not 0:
 			send "&eスライムボール: &d%{_compressed.slime_ball}%st" to {_p}
 		if {_compressed.andesite} is not 0:
-			send "&e糸: &d%{_compressed.andesite}%st" to {_p}
+			send "&e安山岩: &d%{_compressed.andesite}%st" to {_p}
 		if {_compressed.cobbled_deepslate} is not 0:
-			send "&e糸: &d%{_compressed.cobbled_deepslate}%st" to {_p}
+			send "&e深層岩の丸石: &d%{_compressed.cobbled_deepslate}%st" to {_p}
 		if {_compressed.deepslate} is not 0:
-			send "&e糸: &d%{_compressed.deepslate}%st" to {_p}
+			send "&e深層岩: &d%{_compressed.deepslate}%st" to {_p}
 		if {_compressed.diorite} is not 0:
-			send "&e糸: &d%{_compressed.diorite}%st" to {_p}
+			send "&e閃緑岩: &d%{_compressed.diorite}%st" to {_p}
 		if {_compressed.dirt} is not 0:
-			send "&e糸: &d%{_compressed.dirt}%st" to {_p}
+			send "&e土: &d%{_compressed.dirt}%st" to {_p}
 		if {_compressed.grass_block} is not 0:
-			send "&e糸: &d%{_compressed.grass_block}%st" to {_p}
+			send "&e草ブロック: &d%{_compressed.grass_block}%st" to {_p}
 		if {_compressed.gravel} is not 0:
-			send "&e糸: &d%{_compressed.gravel}%st" to {_p}
+			send "&e砂利: &d%{_compressed.gravel}%st" to {_p}
 		if {_compressed.granite} is not 0:
-			send "&e糸: &d%{_compressed.granite}%st" to {_p}
+			send "&e花崗岩: &d%{_compressed.granite}%st" to {_p}
 		if {_compressed.netherrack} is not 0:
-			send "&e糸: &d%{_compressed.netherrack}%st" to {_p}
+			send "&eネザーラック: &d%{_compressed.netherrack}%st" to {_p}
 		if {_compressed.sand} is not 0:
-			send "&e糸: &d%{_compressed.sand}%st" to {_p}
+			send "&e砂: &d%{_compressed.sand}%st" to {_p}
 		if {_compressed.sandstone} is not 0:
-			send "&e糸: &d%{_compressed.sandstone}%st" to {_p}
+			send "&e砂岩: &d%{_compressed.sandstone}%st" to {_p}
 		if {_compressed.stone} is not 0:
-			send "&e糸: &d%{_compressed.stone}%st" to {_p}
+			send "&e石: &d%{_compressed.stone}%st" to {_p}
 		if {_compressed.cobblestone} is not 0:
-			send "&e糸: &d%{_compressed.cobblestone}%st" to {_p}
+			send "&e丸石: &d%{_compressed.cobblestone}%st" to {_p}
 		if {_compressed.tuff} is not 0:
-			send "&e糸: &d%{_compressed.tuff}%st" to {_p}
+			send "&e凝灰岩: &d%{_compressed.tuff}%st" to {_p}
 
 		send "&e合計: &a%{_compressv2.counter}%st" to {_p}
