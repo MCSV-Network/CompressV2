@@ -352,5 +352,4 @@ function cpv2check(p: player):
 			give {_compressed.tuff} of {complessed_tuff} to {_p}
 
 
-		send "&e合計: &a%{_cpv2
-		.counter}%st" to {_p}
+		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
