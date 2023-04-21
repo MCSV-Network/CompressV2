@@ -5,7 +5,7 @@ Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 
 on inventory click:
-	if name of clicked item is "&e圧縮中...":
+	if {cpv2.invlock.%player%} is true
 		cancel event
 command /compressv2 [<text>]:
 	permission: admin
@@ -20,6 +20,7 @@ command /compressv2 [<text>]:
 			cpv2check(player)
 
 function cpv2check(p: player):
+	#何も設定しない方が楽だけどバグるみたいなので0に設定
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
 	set {_compressed.rotten_flesh} to 0
 	set {_compressed.bone} to 0
@@ -45,6 +46,7 @@ function cpv2check(p: player):
 	set {_compressed.stone} to 0
 	set {_compressed.cobblestone} to 0
 	set {_compressed.tuff} to 0
+	#inv固定
 	set {cpv2.invlock.%{_p}%} to true
 	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
 	set {_item} to sunflower named "&e圧縮中..."
@@ -354,4 +356,4 @@ function cpv2check(p: player):
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
 	delete {cpv2.invlock.%{_p}%}
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
-	send "&7*<none> = Success"
+	send "&7*<none> = Success" to {_p}
