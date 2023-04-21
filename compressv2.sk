@@ -144,3 +144,60 @@ function cpv2check(p: player):
 		wait a tick
 	
 	if {_compressv2.counter} is 0:
+		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!"
+	
+	if {_compressv2.counter} >= 1:
+		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!"
+		send "&7==&b圧縮されたアイテムの内容&7=="
+
+		if {_compressed.rotten_flesh} is not 0:
+			send "&e腐った肉: &d%{_compressed.rotten_flesh}%st"
+		if {_compressed.bone} is not 0:
+			send "&e骨: &d%{_compressed.bone}%st"
+		if {_compressed.arrow} is not 0:
+			send "&e矢: &d%{_compressed.arrow}%st"
+		if {_compressed.gunpowder} is not 0:
+			send "&e火薬: &d%{_compressed.gunpowder}%st"
+		if {_compressed.spider_eye} is not 0:
+			send "&eクモの目: &d%{_compressed.spider_eye}%st"
+		if {_compressed.string} is not 0:
+			send "&e糸: &d%{_compressed.string}%st"
+		if {_compressed.ender_pearl} is not 0:
+			send "&eエンダーパール: &d%{_compressed.ender_pearl}%st"
+		if {_compressed.magma_cream} is not 0:
+			send "&eマグマクリーム: &d%{_compressed.magma_cream}%st"
+
+		if {_compressed.blaze_rod} is not 0:
+			send "&eブレイズロッド: &d%{_compressed.blaze_rod}%st"
+		if {_compressed.slime_ball} is not 0:
+			send "&eスライムボール: &d%{_compressed.slime_ball}%st"
+		if {_compressed.andesite} is not 0:
+			send "&e糸: &d%{_compressed.andesite}%st"
+		if {_compressed.cobbled_deepslate} is not 0:
+			send "&e糸: &d%{_compressed.cobbled_deepslate}%st"
+		if {_compressed.deepslate} is not 0:
+			send "&e糸: &d%{_compressed.deepslate}%st"
+		if {_compressed.diorite} is not 0:
+			send "&e糸: &d%{_compressed.diorite}%st"
+		if {_compressed.dirt} is not 0:
+			send "&e糸: &d%{_compressed.dirt}%st"
+		if {_compressed.grass_block} is not 0:
+			send "&e糸: &d%{_compressed.grass_block}%st"
+		if {_compressed.gravel} is not 0:
+			send "&e糸: &d%{_compressed.gravel}%st"
+		if {_compressed.granite} is not 0:
+			send "&e糸: &d%{_compressed.granite}%st"
+		if {_compressed.netherrack} is not 0:
+			send "&e糸: &d%{_compressed.netherrack}%st"
+		if {_compressed.sand} is not 0:
+			send "&e糸: &d%{_compressed.sand}%st"
+		if {_compressed.sandstone} is not 0:
+			send "&e糸: &d%{_compressed.sandstone}%st"
+		if {_compressed.stone} is not 0:
+			send "&e糸: &d%{_compressed.stone}%st"
+		if {_compressed.cobblestone} is not 0:
+			send "&e糸: &d%{_compressed.cobblestone}%st"
+		if {_compressed.tuff} is not 0:
+			send "&e糸: &d%{_compressed.tuff}%st"
+
+		send "&e合計: &a%{_compressv2.counter}%st"
