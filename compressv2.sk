@@ -21,7 +21,7 @@ command /compressv2 [<text>]:
 function cpv2check(p: player):
 	send "%{cpv2.prefix}% &7インベントリをチェック中..." to {_p}
 	set {cpv2.invlock.%{_p}%} to true
-	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%"
+	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
 	set {_item} to sunflower
 	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
 	send "&7[debug] Looping(36 times)" to {_p}
@@ -173,7 +173,7 @@ function cpv2check(p: player):
 			add 1 to {_compressv2.counter}
 		wait a tick
 	
-	send "count: %{_compressv2.counter}%"
+	send "count: %{_compressv2.counter}%" to {_p}
 	if {_compressv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
 	
