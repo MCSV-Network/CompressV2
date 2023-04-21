@@ -20,7 +20,31 @@ command /compressv2 [<text>]:
 			cpv2check(player)
 
 function cpv2check(p: player):
-	send "%{cpv2.prefix}% &7インベントリをチェック中..." to {_p}
+	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
+	set {_compressed.rotten_flesh} to 0
+	set {_compressed.bone} to 0
+	set {_compressed.arrow} to 0
+	set {_compressed.gunpowder} to 0
+	set {_compressed.spider_eye} to 0
+	set {_compressed.string} to 0
+	set {_compressed.ender_pearl} to 0
+	set {_compressed.magma_cream} to 0
+	set {_compressed.blaze_rod} to 0
+	set {_compressed.slime_ball} to 0
+	set {_compressed.andesite} to 0
+	set {_compressed.cobbled_deepslate} to 0
+	set {_compressed.deepslate} to 0
+	set {_compressed.diorite} to 0
+	set {_compressed.dirt} to 0
+	set {_compressed.grass_block} to 0
+	set {_compressed.gravel} to 0
+	set {_compressed.granite} to 0
+	set {_compressed.netherrack} to 0
+	set {_compressed.sand} to 0
+	set {_compressed.sandstone} to 0
+	set {_compressed.stone} to 0
+	set {_compressed.cobblestone} to 0
+	set {_compressed.tuff} to 0
 	set {cpv2.invlock.%{_p}%} to true
 	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
 	set {_item} to sunflower named "&e圧縮中..."
