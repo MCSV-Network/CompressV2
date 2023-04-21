@@ -26,6 +26,7 @@ function cpv2check(p: player):
 	set {_item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
 	send "&7[debug] Looping(36 times)" to {_p}
+	set {_cpv2.counter} to 0
 	loop 36 times:
 		add 1 to {_slot}
 		if slot {_slot} of {_p}'s inventory is 64 of rotten flesh:
@@ -33,152 +34,152 @@ function cpv2check(p: player):
 			set 1st line of lore of {_item} to "&c01"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.rotten_flesh}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of bone:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c02"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.bone}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of arrow:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c03"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.arrow}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of gunpowder:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c04"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.gunpowder}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of spider eye:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c05"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.spider_eye}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of string:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c06"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.string}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of ender pearl:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c07"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.ender_pearl}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of magma cream:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c08"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.magma_cream}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of blaze rod:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c09"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.blaze_rod}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of slime ball:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c10"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.slime_ball}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of andesite:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c11"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.andesite}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of cobbled deepslate:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c12"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.cobbled_deepslate}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of deepslate:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c13"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.deepslate}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of diorite:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c14"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.diorite}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of dirt:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c15"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.dirt}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of grass block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c16"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.grass_block}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of gravel:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c17"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.gravel}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of granite:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c18"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.granite}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of netherrack:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c19"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.netherrack}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of sand:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c20"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.sand}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of sandstone:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c21"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.sandstone}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of stone:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c22"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.stone}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of cobblestone:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c23"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.cobblestone}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c24"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
-			add 1 to {_compressv2.counter}
+			add 1 to {_cpv2.counter}
 		wait a tick
 	
-	send "count: %{_compressv2.counter}%" to {_p}
-	if {_compressv2.counter} is 0:
+	send "count: %{_cpv2.counter}%" to {_p}
+	if {_cpv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
 	
-	if {_compressv2.counter} >= 1:
+	if {_cpv2.counter} >= 1:
 		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
 		send "&7==&b圧縮されたアイテムの内容&7==" to {_p}
 
@@ -327,4 +328,4 @@ function cpv2check(p: player):
 			give {_compressed.tuff} of {complessed_tuff} to {_p}
 
 
-		send "&e合計: &a%{_compressv2.counter}%st" to {_p}
+		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
