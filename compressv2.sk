@@ -184,7 +184,7 @@ function cpv2check(p: player):
 		if {_compressed.rotten_flesh} is not 0:
 			send "&e腐った肉: &d%{_compressed.rotten_flesh}%st" to {_p}
 			set 1st line of lore of {_item} to "&c01"
-			remove {_compressed.rotten_flesh} of {_item} to {_p}'s inventory
+			remove {_compressed.rotten_flesh} of {_item} from {_p}'s inventory
 		if {_compressed.bone} is not 0:
 			send "&e骨: &d%{_compressed.bone}%st" to {_p}
 		if {_compressed.arrow} is not 0:
