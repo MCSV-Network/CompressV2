@@ -4,8 +4,18 @@
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 
+on drop:
+	if {cpv2.invlock.%player%} is true:
+		send "&c圧縮中のため、インベントリはロックされています!"
+		send "&7圧縮をしていないのにこのメッセージが表示される場合は"
+		send "一度&a/compressv2 all&7を実行してみてください。"
+		cancel event
+
 on inventory click:
 	if {cpv2.invlock.%player%} is true:
+		send "&c圧縮中のため、インベントリはロックされています!"
+		send "&7圧縮をしていないのにこのメッセージが表示される場合は"
+		send "一度&a/compressv2 all&7を実行してみてください。"
 		cancel event
 command /compressv2 [<text>]:
 	permission: admin
