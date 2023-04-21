@@ -171,9 +171,9 @@ function cpv2check(p: player):
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_compressv2.counter}
-		send "&7[debug] waiting(1 tick)" to {_p}
 		wait a tick
 	
+	send "count: %{_compressv2.counter}%"
 	if {_compressv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
 	
