@@ -352,3 +352,6 @@ function cpv2check(p: player):
 			give {_compressed.tuff} of {complessed_tuff} to {_p}
 
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
+	delete {cpv2.invlock.%{_p}%}
+	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
+	send "&7*<none> = Success"
