@@ -186,51 +186,145 @@ function cpv2check(p: player):
 			send "&e腐った肉: &d%{_compressed.rotten_flesh}%st" to {_p}
 			set 1st line of lore of {_item} to "&c01"
 			remove {_compressed.rotten_flesh} of {_item} from {_p}'s inventory
+			give {_compressed.rotten_flesh} of {complessed_rotten_flesh} to {_p}
+
 		if {_compressed.bone} is not 0:
 			send "&e骨: &d%{_compressed.bone}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.arrow} is not 0:
 			send "&e矢: &d%{_compressed.arrow}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.gunpowder} is not 0:
 			send "&e火薬: &d%{_compressed.gunpowder}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.spider_eye} is not 0:
 			send "&eクモの目: &d%{_compressed.spider_eye}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.string} is not 0:
 			send "&e糸: &d%{_compressed.string}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.ender_pearl} is not 0:
 			send "&eエンダーパール: &d%{_compressed.ender_pearl}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.magma_cream} is not 0:
 			send "&eマグマクリーム: &d%{_compressed.magma_cream}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.blaze_rod} is not 0:
 			send "&eブレイズロッド: &d%{_compressed.blaze_rod}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.slime_ball} is not 0:
 			send "&eスライムボール: &d%{_compressed.slime_ball}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.andesite} is not 0:
 			send "&e安山岩: &d%{_compressed.andesite}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.cobbled_deepslate} is not 0:
 			send "&e深層岩の丸石: &d%{_compressed.cobbled_deepslate}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.deepslate} is not 0:
 			send "&e深層岩: &d%{_compressed.deepslate}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.diorite} is not 0:
 			send "&e閃緑岩: &d%{_compressed.diorite}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.dirt} is not 0:
 			send "&e土: &d%{_compressed.dirt}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.grass_block} is not 0:
 			send "&e草ブロック: &d%{_compressed.grass_block}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.gravel} is not 0:
 			send "&e砂利: &d%{_compressed.gravel}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.granite} is not 0:
 			send "&e花崗岩: &d%{_compressed.granite}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.netherrack} is not 0:
 			send "&eネザーラック: &d%{_compressed.netherrack}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.sand} is not 0:
 			send "&e砂: &d%{_compressed.sand}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.sandstone} is not 0:
 			send "&e砂岩: &d%{_compressed.sandstone}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.stone} is not 0:
 			send "&e石: &d%{_compressed.stone}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.cobblestone} is not 0:
 			send "&e丸石: &d%{_compressed.cobblestone}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 		if {_compressed.tuff} is not 0:
 			send "&e凝灰岩: &d%{_compressed.tuff}%st" to {_p}
+			set 1st line of lore of {_item} to "&c01"
+			remove {_compressed.o} of {_item} from {_p}'s inventory
+			give {_compressed.o} of {complessed_} to {_p}
+
 
 		send "&e合計: &a%{_compressv2.counter}%st" to {_p}
