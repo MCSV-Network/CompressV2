@@ -5,7 +5,7 @@ Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 
 on inventory click:
-	if {cpv2.invlock.%player%} is true
+	if {cpv2.invlock.%player%} is true:
 		cancel event
 command /compressv2 [<text>]:
 	permission: admin
