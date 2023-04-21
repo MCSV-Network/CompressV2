@@ -19,6 +19,7 @@ command /compressv2 [<text>]:
 
 function cpv2check(p: player):
 	send "%{cpv2.prefix}% &7インベントリをチェック中..." to {_p}
+	send "&7[debug] Looping(36 times)" to {_p}
 	loop 36 times:
 		add 1 to {_slot}
 		if slot {_slot} of {_p}'s inventory is 64 of rotten flesh:
@@ -141,6 +142,7 @@ function cpv2check(p: player):
 			set slot {_slot} of {_p}'s inventory to sunflower
 			add 1 to {_compressed.tuff}
 			add 1 to {_compressv2.counter}
+		send "&7[debug] waiting(1 tick)" to {_p}
 		wait a tick
 	
 	if {_compressv2.counter} is 0:
