@@ -53,6 +53,9 @@ function cpv2check(p: player, i: text):
 	
 	#定義(0)
 	set {_compressed.%{_cp.item}%} to 0
+	#invlock起動
+	set {cpv2.invlock.%{_p}%} to true
+	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
 	#圧縮開始
 	set {_item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
@@ -79,7 +82,10 @@ function cpv2check(p: player, i: text):
 		send "&b圧縮されたアイテム: &e%{_cp.item}% &7(%{_compressed.%{_cp.item}%}%st)" to {_p}
 		remove {_compressed.{_cp.item}} of {_cp.item2} from {_p}'s inventory
 		give {_compressed.{_cp.item}} of {complessed_%{_cpv2.item}%} to {_p}
-
+	#invlock解除
+	delete {cpv2.invlock.%{_p}%}
+	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
+	send "&7*<none> = Success" to {_p}
 
 #compress allのfunction
 function cpv2checkall(p: player):
