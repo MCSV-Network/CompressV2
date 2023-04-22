@@ -41,18 +41,18 @@ command /compressv2 [<text>]:
 
 function cpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
-	set {_item} to {_i}
-	send "&7[debug] item: &a%{_item}%" to {_p}
-	set {_item2} to {_item} parsed as itemtype
-	send "&7[debug] item2: &a%{_item}%" to {_p}
+	set {_cp.item} to {_i}
+	send "&7[debug] item: &a%{_cp.item}%" to {_p}
+	set {_item2} to {_cp.item} parsed as itemtype
+	send "&7[debug] item2: &a%{_cp.item}%" to {_p}
 
 	#置き換え
-	if {_item} is "rotten_flesh":
-		set {_item2} to "rotten flesh" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_item}%" to {_p}
+	if {_cp.item} is "rotten_flesh":
+		set {_cp.item2} to "rotten flesh" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
 	
 	#定義(0)
-	set {_compressed.%{_item}%} to 0
+	set {_compressed.%{_cp.item}%} to 0
 	#圧縮開始
 	set {_item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
@@ -60,11 +60,11 @@ function cpv2check(p: player, i: text):
 	set {_cpv2.counter} to 0
 	loop 36 times:
 		add 1 to {_slot}
-		if slot {_slot} of {_p}'s inventory is 64 of {_item2}:
+		if slot {_slot} of {_p}'s inventory is 64 of {_cp.item2}:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c%{_item}%"
+			set 1st line of lore of {_item} to "&c%{_cp.item}%"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.%{_item}%}
+			add 1 to {_compressed.%{_cp.item}%}
 			add 1 to {_cpv2.counter}
 		wait a tick
 	
@@ -76,7 +76,7 @@ function cpv2check(p: player, i: text):
 	
 	if {_cpv2.counter} >= 1:
 		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
-		send "&b圧縮されたアイテム: &e%{_item}% &7(%{_compressed.%{_item}%}%st)" to {_p}
+		send "&b圧縮されたアイテム: &e%{_cp.item}% &7(%{_compressed.%{_cp.item}%}%st)" to {_p}
 
 
 #compress allのfunction
