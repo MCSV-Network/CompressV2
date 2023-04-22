@@ -43,7 +43,7 @@ function cpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
 	set {_cp.item} to {_i}
 	send "&7[debug] item: &a%{_cp.item}%" to {_p}
-	set {_item2} to {_cp.item} parsed as itemtype
+	set {_cp.item2} to {_cp.item} parsed as itemtype
 	send "&7[debug] item2: &a%{_cp.item}%" to {_p}
 
 	#置き換え
