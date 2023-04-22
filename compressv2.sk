@@ -82,7 +82,7 @@ function cpv2check(p: player, i: text):
 		send "&7[debug] cp.item: &a%{_cp.item}%&7, cp.item2: &a%{_cp.item2}%" to {_p}
 		send "&b圧縮されたアイテム: &e%{_cp.item}% &7(%{_compressed.%{_cp.item}%}%st)" to {_p}
 		remove {_compressed.%{_cp.item}%} of {_cp.item2} from {_p}'s inventory
-		give {_compressed.%{_cp.item}%} of {complessed_%{_cpv2.item}%} to {_p}
+		give {_compressed.%{_cp.item}%} of {complessed_%{_cp.item2}%} to {_p}
 	#invlock解除
 	delete {cpv2.invlock.%{_p}%}
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
