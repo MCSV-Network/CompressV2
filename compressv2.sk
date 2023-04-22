@@ -33,6 +33,50 @@ command /compressv2 [<text>]:
 			stop
 		if arg-1 is "all":
 			cpv2checkall(player)
+		else:
+			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff":
+				send "%{cpv2.prefix}% &cそのアイテムは圧縮できません! 正しく入力しているか確認してください。"
+				stop
+			cpv2check(player, arg-1)
+
+function cpv2check(p: player, i: text):
+	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
+	set {_item} to {_i}
+	send "&7[debug] item: &a%{_item}%" to {_p}
+	set {_item2} to {_item} parsed as itemtype
+	send "&7[debug] item2: &a%{_item}%" to {_p}
+
+	#置き換え
+	if {_item} is "rotten_flesh":
+		set {_item2} to "rotten flesh" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_item}%" to {_p}
+	
+	#定義(0)
+	set {_compressed.%{_item}%} to 0
+	#圧縮開始
+	set {_item} to sunflower named "&e圧縮中..."
+	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
+	send "&7[debug] Looping(invcheck)" to {_p}
+	set {_cpv2.counter} to 0
+	loop 36 times:
+		add 1 to {_slot}
+		if slot {_slot} of {_p}'s inventory is 64 of {_item2}:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c%{_item}%"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.%{_item}%}
+			add 1 to {_cpv2.counter}
+		wait a tick
+	
+	send "&7[debug] count: &a%{_cpv2.counter}%" to {_p}
+
+
+	if {_cpv2.counter} is 0:
+		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
+	
+	if {_cpv2.counter} >= 1:
+		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
+		send "&b圧縮されたアイテム: &e%{_item}% &7(%{_compressed.%{_item}%}%st)" to {_p}
 
 
 #compress allのfunction
@@ -63,12 +107,13 @@ function cpv2checkall(p: player):
 	set {_compressed.stone} to 0
 	set {_compressed.cobblestone} to 0
 	set {_compressed.tuff} to 0
-	#inv固定
+	#invlock起動
 	set {cpv2.invlock.%{_p}%} to true
 	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
+	#圧縮開始
 	set {_item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
-	send "&7[debug] Looping(36 times)" to {_p}
+	send "&7[debug] Looping(invcheck)" to {_p}
 	set {_cpv2.counter} to 0
 	loop 36 times:
 		add 1 to {_slot}
@@ -218,8 +263,8 @@ function cpv2checkall(p: player):
 			add 1 to {_cpv2.counter}
 		wait a tick
 	
-	send "&7[debug] count: %{_cpv2.counter}%" to {_p}
-	#
+	send "&7[debug] count: &a%{_cpv2.counter}%" to {_p}
+	#圧縮結果の表示とアイテム付与
 	if {_cpv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
 	
@@ -372,6 +417,8 @@ function cpv2checkall(p: player):
 			give {_compressed.tuff} of {complessed_tuff} to {_p}
 
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
+	
+	#invlock解除
 	delete {cpv2.invlock.%{_p}%}
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
 	send "&7*<none> = Success" to {_p}
