@@ -5,7 +5,7 @@
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 #======================
-#インベントリロック
+#*インベントリロック
 on drop:
 	if {cpv2.invlock.%player%} is true:
 		send "&c圧縮中のため、インベントリはロックされています!"
@@ -22,9 +22,11 @@ on inventory click:
 
 
 #compressV2
+#*圧縮コマンド
 command /compressv2 [<text>]:
 	permission: admin
 	permission message: &cCompressV2は開発中です! リリースをお待ちください!
+	aliases: /cpv2
 	trigger:
 		if arg-1 is not set:
 			close player's inventory
@@ -40,6 +42,14 @@ command /compressv2 [<text>]:
 				stop
 			cpv2check(player, arg-1)
 
+#!===[FUNCTION]===
+
+
+
+
+#?CPV2 Compress
+#?==================
+#*CPV2 圧縮用function
 function cpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
 	set {_cp.item} to {_i}
@@ -89,7 +99,7 @@ function cpv2check(p: player, i: text):
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
 	send "&7*<none> = Success" to {_p}
 
-#compress allのfunction
+#*CPV2 圧縮用function(ALL)
 function cpv2checkall(p: player):
 	#何も設定しない方が楽だけどバグるみたいなので0に設定
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
