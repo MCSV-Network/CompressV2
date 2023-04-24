@@ -84,7 +84,7 @@ function cpv2check(p: player, i: text):
 		replace all "block" in {_cp.item2} with ""
 		send "&7[debug] replaced cp.item2: %{_cp.item2}%"
 		remove {_compressed.%{_cp.item}%} of {_item} from {_p}'s inventory
-		give {_compressed.%{_cp.item}%} of {complessed_%{_cp.item2}%} to {_p}
+		give {_compressed.%{_cp.item}%} of {complessed_%{_cp.item}%} to {_p}
 	#invlock解除
 	delete {cpv2.invlock.%{_p}%}
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
