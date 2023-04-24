@@ -1,10 +1,22 @@
-#CompressV2
+#CompressV2 v0.5
 #by ringo360xd
 
+
+#!=======[DO NOT EDIT]=======
 #定義づけ(prefix)
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
-#======================
+
+#読み込み時のメッセージ
+on skript load:
+	send "&b=================" to console
+	send "&eCompress&bV2 &7- &av0.5" to console
+	send "Created by ringoXD" to console
+	send "Github: &bhttps://github.com/MCSV-Network/CompressV2" to console
+	send "&b=================" to console
+#!=======[DO NOT EDIT]=======
+
+
 #*インベントリロック
 on drop:
 	if {cpv2.invlock.%player%} is true:
@@ -42,10 +54,8 @@ command /compressv2 [<text>]:
 				stop
 			cpv2check(player, arg-1)
 
-#!===[FUNCTION]===
 
-
-
+#!=======[FUNCTION]=======
 
 #?CPV2 Compress
 #?==================
@@ -442,3 +452,12 @@ function cpv2checkall(p: player):
 	delete {cpv2.invlock.%{_p}%}
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
 	send "&7*<none> = Success" to {_p}
+
+
+#?CPV2 UnCompress
+#?==================
+#*CPV2 解凍用function
+function uncpv2check(p: player, i: text):
+	send "未実装" to {_p}
+
+#!=======[FUNCTION]=======
