@@ -67,7 +67,7 @@ function cpv2check(p: player, i: text):
 	set {_cp.item2} to {_i} parsed as itemtype
 	send "&7[debug] item2: &a%{_cp.item2}%" to {_p}
 
-	#置き換え
+	#*置き換え
 	if {_cp.item} is "rotten_flesh":
 		set {_cp.item2} to "rotten flesh" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
