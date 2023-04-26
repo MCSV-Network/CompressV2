@@ -99,7 +99,7 @@ function cpv2check(p: player, i: text):
 	if {_cp.item} is "ender_pearl":
 		set {_cp.item2} to "ender pearl" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
-		set {_num} to 64
+		set {_num} to 16
 		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
 
 	if {_cp.item} is "magma_cream":
