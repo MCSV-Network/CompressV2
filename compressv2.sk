@@ -234,7 +234,7 @@ function cpv2checkall(p: player):
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.string}
 			add 1 to {_cpv2.counter}
-		if slot {_slot} of {_p}'s inventory is 64 of ender pearl:
+		if slot {_slot} of {_p}'s inventory is 16 of ender pearl:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c07"
 			set slot {_slot} of {_p}'s inventory to {_item}
