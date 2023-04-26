@@ -86,7 +86,7 @@ function cpv2check(p: player, i: text):
 	set {_cp.item2} to {_i} parsed as itemtype
 	send "&7[debug] item2: &a%{_cp.item2}%" to {_p}
 	set {_num} to 64
-	send "&7[debug] CP-DetectNum: &a%{_num}%"
+	send "&7[debug] CP-DetectNum: &a%{_num}%" to {_p}
 	#*置き換え
 	if {_cp.item} is "rotten_flesh":
 		set {_cp.item2} to "rotten flesh" parsed as itemtype
@@ -100,7 +100,7 @@ function cpv2check(p: player, i: text):
 		set {_cp.item2} to "ender pearl" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
 		set {_num} to 64
-		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%"
+		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
 
 	if {_cp.item} is "magma_cream":
 		set {_cp.item2} to "magma cream" parsed as itemtype
