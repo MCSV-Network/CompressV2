@@ -54,6 +54,25 @@ command /compressv2 [<text>]:
 				stop
 			cpv2check(player, arg-1)
 
+command /uncompressv2 [<text>]:
+	permission: admin
+	permission message: &cCompressV2は開発中です! リリースをお待ちください!
+	aliases: /uncpv2
+	trigger:
+		if arg-1 is not set:
+			close player's inventory
+			play sound "block.note_block.bass" to player
+			send "%{cpv2.prefix}% &c解凍したいアイテムを選んでください!"
+			send "&e使用方法: &a/uncompressv2 &d<アイテム名>"
+			stop
+		if arg-1 is "all":
+			uncpv2checkall(player)
+		else:
+			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff":
+				send "%{cpv2.prefix}% &cそのアイテムは圧縮できません! 正しく入力しているか確認してください。"
+				stop
+			uncpv2check(player, arg-1)
+
 
 #!=======[FUNCTION]=======
 
@@ -489,4 +508,13 @@ function cpv2checkall(p: player):
 function uncpv2check(p: player, i: text):
 	send "未実装" to {_p}
 
+
+
+
+
+
+
+#*CPV2 解凍用function(ALL)
+function uncpv2checkall(p: player):
+	send "未実装" to {_p}
 #!=======[FUNCTION]=======
