@@ -85,7 +85,8 @@ function cpv2check(p: player, i: text):
 	send "&7[debug] item: &a%{_cp.item}%" to {_p}
 	set {_cp.item2} to {_i} parsed as itemtype
 	send "&7[debug] item2: &a%{_cp.item2}%" to {_p}
-
+	set {_num} to 64
+	send "&7[debug] CP-DetectNum: &a%{_num}%"
 	#*置き換え
 	if {_cp.item} is "rotten_flesh":
 		set {_cp.item2} to "rotten flesh" parsed as itemtype
@@ -98,6 +99,8 @@ function cpv2check(p: player, i: text):
 	if {_cp.item} is "ender_pearl":
 		set {_cp.item2} to "ender pearl" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		set {_num} to 64
+		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%"
 
 	if {_cp.item} is "magma_cream":
 		set {_cp.item2} to "magma cream" parsed as itemtype
@@ -132,7 +135,7 @@ function cpv2check(p: player, i: text):
 	set {_cpv2.counter} to 0
 	loop 36 times:
 		add 1 to {_slot}
-		if slot {_slot} of {_p}'s inventory is 64 of {_cp.item2}:
+		if slot {_slot} of {_p}'s inventory is {_num} of {_cp.item2}:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c%{_cp.item}%"
 			set slot {_slot} of {_p}'s inventory to {_item}
