@@ -71,6 +71,35 @@ function cpv2check(p: player, i: text):
 	if {_cp.item} is "rotten_flesh":
 		set {_cp.item2} to "rotten flesh" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "spider_eye":
+		set {_cp.item2} to "spider eye" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "ender_pearl":
+		set {_cp.item2} to "ender pearl" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "magma_cream":
+		set {_cp.item2} to "magma cream" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "blaze_rod":
+		set {_cp.item2} to "blaze rod" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "slime_ball":
+		set {_cp.item2} to "slime ball" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "cobbled_deepslate":
+		set {_cp.item2} to "cobbled deepslate" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
+	if {_cp.item} is "grass_block":
+		set {_cp.item2} to "grass block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+
 	
 	#定義(0)
 	set {_compressed.%{_cp.item}%} to 0
