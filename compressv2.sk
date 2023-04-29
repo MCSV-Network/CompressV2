@@ -36,7 +36,6 @@ on inventory click:
 #compressV2
 #*圧縮コマンド
 command /compressv2 [<text>]:
-	permission: admin
 	permission message: &cCompressV2は開発中です! リリースをお待ちください!
 	aliases: /cpv2
 	trigger:
@@ -55,7 +54,6 @@ command /compressv2 [<text>]:
 			cpv2check(player, arg-1)
 
 command /uncompressv2 [<text>]:
-	permission: admin
 	permission message: &cCompressV2は開発中です! リリースをお待ちください!
 	aliases: /uncpv2
 	trigger:
