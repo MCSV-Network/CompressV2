@@ -382,63 +382,151 @@ function cpv2checkall(p: player):
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c25"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.slowness_arrow}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of prismarine crystals:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c26"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.prismarine_crystals}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of prismarine shard:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c27"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.prismarine_shard}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of soul sand block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c28"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.soul_sand}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of soul soil:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c29"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.soul_soil}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of ice block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c30"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.ice}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of packed ice block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c31"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.packed_ice}
 			add 1 to {_cpv2.counter}
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of blue ice block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c32"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.tuff}
+			add 1 to {_compressed.blue_ice}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of red sand block:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c30"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.red_sand}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of snow block:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c31"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.snow_block}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of basalt:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.basalt}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of smooth basalt:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.smooth_basalt}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of dripstone block:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.dripstone_block}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of calcite:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.calcite}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of blackstone:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.blackstone}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of obsidian:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.obsidian}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of magma block:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.magma_block}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of end stone block:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.end_stone}
+			add 1 to {_cpv2.counter}
+
+
+		if slot {_slot} of {_p}'s inventory is 64 of clay block:
+			set slot {_slot} of {_p}'s inventory to air
+			set 1st line of lore of {_item} to "&c32"
+			set slot {_slot} of {_p}'s inventory to {_item}
+			add 1 to {_compressed.clay}
 			add 1 to {_cpv2.counter}
 
 
