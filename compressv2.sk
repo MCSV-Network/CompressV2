@@ -8,10 +8,6 @@ Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 
 #*変数追加用
-command /setslownessarrow:
-	permission: admin
-	trigger:
-		set {cpv2checkitem.slowness_arrow} to player's tool
 command /setcompresseditem [<text>]:
 	permission: admin
 	trigger:
@@ -382,9 +378,9 @@ function cpv2checkall(p: player):
 #!新アイテム================================
 
 
-		if slot {_slot} of {_p}'s inventory is 64 of tuff:
+		if slot {_slot} of {_p}'s inventory is 64 of slowness tipped arrow:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c25"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -392,7 +388,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c26"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -400,7 +396,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c27"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -408,7 +404,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c28"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -416,7 +412,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c29"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -424,7 +420,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c30"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -432,7 +428,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c31"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
@@ -440,7 +436,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of tuff:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c24"
+			set 1st line of lore of {_item} to "&c32"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
