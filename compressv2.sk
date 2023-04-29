@@ -7,6 +7,14 @@
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 
+#*変数追加用
+command /setcompresseditem [<text>]:
+	permission: admin
+	trigger:
+		set {_name} to arg-1
+		send "&7debug: %{_name}%"
+		set {compressed_%{_name}%} to player's tool
+		stop
 #読み込み時のメッセージ
 on skript load:
 	send "&b=================" to console
