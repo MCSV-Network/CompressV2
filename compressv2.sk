@@ -468,7 +468,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of smooth basalt:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c33"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.smooth_basalt}
 			add 1 to {_cpv2.counter}
@@ -476,7 +476,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of dripstone block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c34"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.dripstone_block}
 			add 1 to {_cpv2.counter}
@@ -484,7 +484,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of calcite:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c35"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.calcite}
 			add 1 to {_cpv2.counter}
@@ -492,7 +492,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of blackstone:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c36"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.blackstone}
 			add 1 to {_cpv2.counter}
@@ -500,7 +500,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of obsidian:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c37"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.obsidian}
 			add 1 to {_cpv2.counter}
@@ -508,7 +508,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of magma block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c38"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.magma_block}
 			add 1 to {_cpv2.counter}
@@ -516,7 +516,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of end stone block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c39"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.end_stone}
 			add 1 to {_cpv2.counter}
@@ -524,7 +524,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of clay block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c40"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.clay}
 			add 1 to {_cpv2.counter}
