@@ -14,7 +14,7 @@ command /setcompresseditem [<text>]:
 		set {_name} to arg-1
 		send "&7debug: %{_name}%"
 		set {compressed_%{_name}%} to player's tool
-		send "Success. name: {compressed_%{name}%} - %{compressed_%{_name}%}%"
+		send "Success. name: {compressed_%{_name}%} - %{compressed_%{_name}%}%"
 		stop
 #読み込み時のメッセージ
 on skript load:
