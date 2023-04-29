@@ -65,8 +65,6 @@ command /uncompressv2 [<text>]:
 			send "%{cpv2.prefix}% &c解凍したいアイテムを選んでください!"
 			send "&e使用方法: &a/uncompressv2 &d<アイテム名>"
 			stop
-		if arg-1 is "all":
-			uncpv2checkall(player)
 		else:
 			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff":
 				send "%{cpv2.prefix}% &cそのアイテムは圧縮できません! 正しく入力しているか確認してください。"
@@ -90,37 +88,37 @@ function cpv2check(p: player, i: text):
 	#*置き換え
 	if {_cp.item} is "rotten_flesh":
 		set {_cp.item2} to "rotten flesh" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "spider_eye":
 		set {_cp.item2} to "spider eye" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "ender_pearl":
 		set {_cp.item2} to "ender pearl" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 		set {_num} to 16
 		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
 
 	if {_cp.item} is "magma_cream":
 		set {_cp.item2} to "magma cream" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "blaze_rod":
 		set {_cp.item2} to "blaze rod" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "slime_ball":
 		set {_cp.item2} to "slime ball" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "cobbled_deepslate":
 		set {_cp.item2} to "cobbled deepslate" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "grass_block":
 		set {_cp.item2} to "grass block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item}%" to {_p}
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	
 	#定義(0)
@@ -509,15 +507,70 @@ function cpv2checkall(p: player):
 #?==================
 #*CPV2 解凍用function
 function uncpv2check(p: player, i: text):
-	send "未実装" to {_p}
+	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
+	#定義
+	set {_uncp.item} to {_i}
+	send "&7[debug] item: &a%{_uncp.item}%" to {_p}
+	set {_uncp.item2} to {_i} parsed as itemtype
+	#*置き換え
+	if {_uncp.item} is "rotten_flesh":
+		set {_uncp.item2} to "rotten flesh" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+
+	if {_uncp.item} is "spider_eye":
+		set {_uncp.item2} to "spider eye" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+
+	if {_uncp.item} is "ender_pearl":
+		set {_uncp.item2} to "ender pearl" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+		set {_num} to 16
+		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
+
+	if {_uncp.item} is "magma_cream":
+		set {_uncp.item2} to "magma cream" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+
+	if {_uncp.item} is "blaze_rod":
+		set {_uncp.item2} to "blaze rod" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+
+	if {_uncp.item} is "slime_ball":
+		set {_uncp.item2} to "slime ball" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+
+	if {_uncp.item} is "cobbled_deepslate":
+		set {_uncp.item2} to "cobbled deepslate" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
+
+	if {_uncp.item} is "grass_block":
+		set {_uncp.item2} to "grass block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
 
 
+	#invlock起動
+	set {cpv2.invlock.%{_p}%} to true
+	#解凍開始
+	set {_tmp.item} to sunflower named "&e圧縮中..."
+	set 1st line of lore of {_tmp.item} to "&cERROR! (Code issue)"
+	send "&7[debug] target: &a%{complessed_%{_uncp.item}%}%" to {_p}
+	set {_n} to amount of {complessed_%{_uncp.item}%} in player's inventory
+	if {_n} >= 1:
+		set {_tmp.amount} to {_n} * 64
+		send "&7[debug] check: &a%{_tmp.amount}%" to {_p}
+		if {_p} doesn't have enough space for {_tmp.amount} of stone:
+			send "&cError! インベントリの空きがありません!" to {_p}
+			stop
+		remove all {complessed_%{_uncp.item}%} from {_p}'s inventory
+		give {_tmp.amount} of {_uncp.item2} to {_p}
+		send "%{cpv2.prefix}% &aSuccess! &e解凍が完了しました!" to {_p}
+		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
 
 
 
 
 
 #*CPV2 解凍用function(ALL)
-function uncpv2checkall(p: player):
+function uncpv2check(p: player, i: text):
 	send "未実装" to {_p}
 #!=======[FUNCTION]=======
