@@ -199,6 +199,27 @@ function cpv2checkall(p: player):
 	set {_compressed.stone} to 0
 	set {_compressed.cobblestone} to 0
 	set {_compressed.tuff} to 0
+	#!新アイテム===
+	set {_compressed.slowness_arrow} to 0
+	set {_compressed.prismarine_crystals} to 0
+	set {_compressed.prismarine_shard} to 0
+	set {_compressed.soul_sand} to 0
+	set {_compressed.soul_soil} to 0
+	set {_compressed.ice} to 0
+	set {_compressed.packed_ice} to 0
+	set {_compressed.blue_ice} to 0
+	set {_compressed.red_sand} to 0
+	set {_compressed.snow_block} to 0
+	set {_compressed.basalt} to 0
+	set {_compressed.smooth_basalt} to 0
+	set {_compressed.dripstone_block} to 0
+	set {_compressed.calcite} to 0
+	set {_compressed.blackstone} to 0
+	set {_compressed.obsidian} to 0
+	set {_compressed.magma_block} to 0
+	set {_compressed.end_stone} to 0
+	set {_compressed.clay} to 0
+	#!新アイテム===
 	#invlock起動
 	set {cpv2.invlock.%{_p}%} to true
 	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
@@ -368,61 +389,61 @@ function cpv2checkall(p: player):
 			send "&e腐った肉: &d%{_compressed.rotten_flesh}%st" to {_p}
 			set 1st line of lore of {_item} to "&c01"
 			remove {_compressed.rotten_flesh} of {_item} from {_p}'s inventory
-			give {_compressed.rotten_flesh} of {complessed_rotten_flesh} to {_p}
+			give {_compressed.rotten_flesh} of {compressed_rotten_flesh} to {_p}
 
 		if {_compressed.bone} is not 0:
 			send "&e骨: &d%{_compressed.bone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c02"
 			remove {_compressed.bone} of {_item} from {_p}'s inventory
-			give {_compressed.bone} of {complessed_bone} to {_p}
+			give {_compressed.bone} of {compressed_bone} to {_p}
 
 		if {_compressed.arrow} is not 0:
 			send "&e矢: &d%{_compressed.arrow}%st" to {_p}
 			set 1st line of lore of {_item} to "&c03"
 			remove {_compressed.arrow} of {_item} from {_p}'s inventory
-			give {_compressed.arrow} of {complessed_arrow} to {_p}
+			give {_compressed.arrow} of {compressed_arrow} to {_p}
 
 		if {_compressed.gunpowder} is not 0:
 			send "&e火薬: &d%{_compressed.gunpowder}%st" to {_p}
 			set 1st line of lore of {_item} to "&c04"
 			remove {_compressed.gunpowder} of {_item} from {_p}'s inventory
-			give {_compressed.gunpowder} of {complessed_gunpowder} to {_p}
+			give {_compressed.gunpowder} of {compressed_gunpowder} to {_p}
 
 		if {_compressed.spider_eye} is not 0:
 			send "&eクモの目: &d%{_compressed.spider_eye}%st" to {_p}
 			set 1st line of lore of {_item} to "&c05"
 			remove {_compressed.spider_eye} of {_item} from {_p}'s inventory
-			give {_compressed.spider_eye} of {complessed_spider_eye} to {_p}
+			give {_compressed.spider_eye} of {compressed_spider_eye} to {_p}
 
 		if {_compressed.string} is not 0:
 			send "&e糸: &d%{_compressed.string}%st" to {_p}
 			set 1st line of lore of {_item} to "&c06"
 			remove {_compressed.string} of {_item} from {_p}'s inventory
-			give {_compressed.string} of {complessed_string} to {_p}
+			give {_compressed.string} of {compressed_string} to {_p}
 
 		if {_compressed.ender_pearl} is not 0:
 			send "&eエンダーパール: &d%{_compressed.ender_pearl}%st" to {_p}
 			set 1st line of lore of {_item} to "&c07"
 			remove {_compressed.ender_pearl} of {_item} from {_p}'s inventory
-			give {_compressed.ender_pearl} of {complessed_ender_pearl} to {_p}
+			give {_compressed.ender_pearl} of {compressed_ender_pearl} to {_p}
 
 		if {_compressed.magma_cream} is not 0:
 			send "&eマグマクリーム: &d%{_compressed.magma_cream}%st" to {_p}
 			set 1st line of lore of {_item} to "&c08"
 			remove {_compressed.magma_cream} of {_item} from {_p}'s inventory
-			give {_compressed.magma_cream} of {complessed_magma_cream} to {_p}
+			give {_compressed.magma_cream} of {compressed_magma_cream} to {_p}
 
 		if {_compressed.blaze_rod} is not 0:
 			send "&eブレイズロッド: &d%{_compressed.blaze_rod}%st" to {_p}
 			set 1st line of lore of {_item} to "&c09"
 			remove {_compressed.blaze_rod} of {_item} from {_p}'s inventory
-			give {_compressed.blaze_rod} of {complessed_blaze_rod} to {_p}
+			give {_compressed.blaze_rod} of {compressed_blaze_rod} to {_p}
 
 		if {_compressed.slime_ball} is not 0:
 			send "&eスライムボール: &d%{_compressed.slime_ball}%st" to {_p}
 			set 1st line of lore of {_item} to "&c10"
 			remove {_compressed.slime_ball} of {_item} from {_p}'s inventory
-			give {_compressed.slime_ball} of {complessed_slime_ball} to {_p}
+			give {_compressed.slime_ball} of {compressed_slime_ball} to {_p}
 
 		if {_compressed.andesite} is not 0:
 			send "&e安山岩: &d%{_compressed.andesite}%st" to {_p}
