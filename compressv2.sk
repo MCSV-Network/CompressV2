@@ -554,7 +554,7 @@ function uncpv2check(p: player, i: text):
 	set {_tmp.item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_tmp.item} to "&cERROR! (Code issue)"
 	send "&7[debug] target: &a%{complessed_%{_uncp.item}%}%" to {_p}
-	set {_n} to amount of {complessed_%{_uncp.item}%} in player's inventory
+	set {_n} to amount of {complessed_%{_uncp.item}%} in {_p}'s inventory
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
 		send "&7[debug] check: &a%{_tmp.amount}%" to {_p}
@@ -577,9 +577,4 @@ function uncpv2check(p: player, i: text):
 		send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
 		send "&7*<none> = Success" to {_p}
 		stop
-
-
-#*CPV2 解凍用function(ALL)
-function uncpv2check(p: player, i: text):
-	send "未実装" to {_p}
 #!=======[FUNCTION]=======
