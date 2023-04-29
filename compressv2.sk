@@ -165,7 +165,7 @@ function cpv2check(p: player, i: text):
 		send "&7[debug] cp.item: &a%{_cp.item}%&7, cp.item2: &a%{_cp.item2}%" to {_p}
 		send "&b圧縮されたアイテム: &e%{_cp.item}% &7(%{_compressed.%{_cp.item}%}%st)" to {_p}
 		remove {_compressed.%{_cp.item}%} of {_item} from {_p}'s inventory
-		give {_compressed.%{_cp.item}%} of {complessed_%{_cp.item}%} to {_p}
+		give {_compressed.%{_cp.item}%} of {compressed_%{_cp.item}%} to {_p}
 	#invlock解除
 	delete {cpv2.invlock.%{_p}%}
 	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
@@ -449,85 +449,85 @@ function cpv2checkall(p: player):
 			send "&e安山岩: &d%{_compressed.andesite}%st" to {_p}
 			set 1st line of lore of {_item} to "&c11"
 			remove {_compressed.andesite} of {_item} from {_p}'s inventory
-			give {_compressed.andesite} of {complessed_andesite} to {_p}
+			give {_compressed.andesite} of {compressed_andesite} to {_p}
 
 		if {_compressed.cobbled_deepslate} is not 0:
 			send "&e深層岩の丸石: &d%{_compressed.cobbled_deepslate}%st" to {_p}
 			set 1st line of lore of {_item} to "&c12"
 			remove {_compressed.cobbled_deepslate} of {_item} from {_p}'s inventory
-			give {_compressed.cobbled_deepslate} of {complessed_cobbled_deepslate} to {_p}
+			give {_compressed.cobbled_deepslate} of {compressed_cobbled_deepslate} to {_p}
 
 		if {_compressed.deepslate} is not 0:
 			send "&e深層岩: &d%{_compressed.deepslate}%st" to {_p}
 			set 1st line of lore of {_item} to "&c13"
 			remove {_compressed.deepslate} of {_item} from {_p}'s inventory
-			give {_compressed.deepslate} of {complessed_deepslate} to {_p}
+			give {_compressed.deepslate} of {compressed_deepslate} to {_p}
 
 		if {_compressed.diorite} is not 0:
 			send "&e閃緑岩: &d%{_compressed.diorite}%st" to {_p}
 			set 1st line of lore of {_item} to "&c14"
 			remove {_compressed.diorite} of {_item} from {_p}'s inventory
-			give {_compressed.diorite} of {complessed_diorite} to {_p}
+			give {_compressed.diorite} of {compressed_diorite} to {_p}
 
 		if {_compressed.dirt} is not 0:
 			send "&e土: &d%{_compressed.dirt}%st" to {_p}
 			set 1st line of lore of {_item} to "&c15"
 			remove {_compressed.dirt} of {_item} from {_p}'s inventory
-			give {_compressed.dirt} of {complessed_dirt} to {_p}
+			give {_compressed.dirt} of {compressed_dirt} to {_p}
 
 		if {_compressed.grass_block} is not 0:
 			send "&e草ブロック: &d%{_compressed.grass_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c16"
 			remove {_compressed.grass_block} of {_item} from {_p}'s inventory
-			give {_compressed.grass_block} of {complessed_grass_block} to {_p}
+			give {_compressed.grass_block} of {compressed_grass_block} to {_p}
 
 		if {_compressed.gravel} is not 0:
 			send "&e砂利: &d%{_compressed.gravel}%st" to {_p}
 			set 1st line of lore of {_item} to "&c17"
 			remove {_compressed.gravel} of {_item} from {_p}'s inventory
-			give {_compressed.gravel} of {complessed_gravel} to {_p}
+			give {_compressed.gravel} of {compressed_gravel} to {_p}
 
 		if {_compressed.granite} is not 0:
 			send "&e花崗岩: &d%{_compressed.granite}%st" to {_p}
 			set 1st line of lore of {_item} to "&c18"
 			remove {_compressed.granite} of {_item} from {_p}'s inventory
-			give {_compressed.granite} of {complessed_granite} to {_p}
+			give {_compressed.granite} of {compressed_granite} to {_p}
 
 		if {_compressed.netherrack} is not 0:
 			send "&eネザーラック: &d%{_compressed.netherrack}%st" to {_p}
 			set 1st line of lore of {_item} to "&c19"
 			remove {_compressed.netherrack} of {_item} from {_p}'s inventory
-			give {_compressed.netherrack} of {complessed_netherrack} to {_p}
+			give {_compressed.netherrack} of {compressed_netherrack} to {_p}
 
 		if {_compressed.sand} is not 0:
 			send "&e砂: &d%{_compressed.sand}%st" to {_p}
 			set 1st line of lore of {_item} to "&c20"
 			remove {_compressed.sand} of {_item} from {_p}'s inventory
-			give {_compressed.sand} of {complessed_sand} to {_p}
+			give {_compressed.sand} of {compressed_sand} to {_p}
 
 		if {_compressed.sandstone} is not 0:
 			send "&e砂岩: &d%{_compressed.sandstone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c21"
 			remove {_compressed.sandstone} of {_item} from {_p}'s inventory
-			give {_compressed.sandstone} of {complessed_sandstone} to {_p}
+			give {_compressed.sandstone} of {compressed_sandstone} to {_p}
 
 		if {_compressed.stone} is not 0:
 			send "&e石: &d%{_compressed.stone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c22"
 			remove {_compressed.stone} of {_item} from {_p}'s inventory
-			give {_compressed.stone} of {complessed_stone} to {_p}
+			give {_compressed.stone} of {compressed_stone} to {_p}
 
 		if {_compressed.cobblestone} is not 0:
 			send "&e丸石: &d%{_compressed.cobblestone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c23"
 			remove {_compressed.cobblestone} of {_item} from {_p}'s inventory
-			give {_compressed.cobblestone} of {complessed_cobblestone} to {_p}
+			give {_compressed.cobblestone} of {compressed_cobblestone} to {_p}
 
 		if {_compressed.tuff} is not 0:
 			send "&e凝灰岩: &d%{_compressed.tuff}%st" to {_p}
 			set 1st line of lore of {_item} to "&c24"
 			remove {_compressed.tuff} of {_item} from {_p}'s inventory
-			give {_compressed.tuff} of {complessed_tuff} to {_p}
+			give {_compressed.tuff} of {compressed_tuff} to {_p}
 
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
 	
@@ -587,15 +587,15 @@ function uncpv2check(p: player, i: text):
 	#解凍開始
 	set {_tmp.item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_tmp.item} to "&cERROR! (Code issue)"
-	send "&7[debug] target: &a%{complessed_%{_uncp.item}%}%" to {_p}
-	set {_n} to amount of {complessed_%{_uncp.item}%} in {_p}'s inventory
+	send "&7[debug] target: &a%{compressed_%{_uncp.item}%}%" to {_p}
+	set {_n} to amount of {compressed_%{_uncp.item}%} in {_p}'s inventory
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
 		send "&7[debug] check: &a%{_tmp.amount}%" to {_p}
 		if {_p} doesn't have enough space for {_tmp.amount} of stone:
 			send "&cError! インベントリの空きがありません!" to {_p}
 			stop
-		remove all {complessed_%{_uncp.item}%} from {_p}'s inventory
+		remove all {compressed_%{_uncp.item}%} from {_p}'s inventory
 		give {_tmp.amount} of {_uncp.item2} to {_p}
 		send "%{cpv2.prefix}% &aSuccess! &e解凍が完了しました!" to {_p}
 		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
