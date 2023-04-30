@@ -831,7 +831,7 @@ function cpv2checkall(p: player):
 			send "&e粘土: &d%{_compressed.clay}%st" to {_p}
 			set 1st line of lore of {_item} to "&c43"
 			remove {_compressed.clay} of {_item} from {_p}'s inventory
-			give {_compressed.clay} of {compressed_sand} to {_p}
+			give {_compressed.clay} of {compressed_clay} to {_p}
 
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
 	
