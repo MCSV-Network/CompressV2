@@ -907,6 +907,7 @@ function uncpv2check(p: player, i: text):
 				send "&7*<none> = Success" to {_p}
 				stop
 			give 64 of {_uncp.item2} to {_p}
+			wait a tick
 		send "%{cpv2.prefix}% &aSuccess! &e解凍が完了しました!" to {_p}
 		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
 		#invlock解除
