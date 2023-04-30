@@ -208,6 +208,7 @@ function cpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "clay_block":
+		set {_cp.item} to "clay"
 		set {_cp.item2} to "clay block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 	
@@ -952,6 +953,7 @@ function uncpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_uncp.item} is "clay_block":
+		set {_cp.item} to "clay"
 		set {_uncp.item2} to "clay block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
