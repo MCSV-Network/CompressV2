@@ -900,8 +900,10 @@ function uncpv2check(p: player, i: text):
 		set {_tmp.amount} to {_n} * 64
 		loop {_n} times:
 			remove 1 of {compressed_%{_uncp.item}%} from {_p}'s inventory
+			#!空きなかったらその時点で解凍が中断されるので残りの圧縮されたアイテムはスキップされる
+			#TODO: はよ直せ
 			if {_p} doesn't have enough space for 64 of stone:
-				send "&cError! インベントリの空きがありません!" to {_p}
+				send "&cError! インベントリの空きがありません!解凍が中断されました!" to {_p}
 				delete {cpv2.invlock.%{_p}%}
 				send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
 				send "&7*<none> = Success" to {_p}
