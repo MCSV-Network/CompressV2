@@ -75,7 +75,7 @@ command /compressv2 [<text>]:
 		if arg-1 is "all":
 			cpv2checkall(player)
 		else:
-			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff" or "slowness_arrow" or "prismarine_crystals" or "prismarine_shard" or "soul_sand" or "soul_soil" or "ice" or "packed_ice" or "blue_ice" or "red_sand" or "snow_block" or "basalt" or "smooth_basalt" or "dripstone_block" or "calcite" or "blackstone" or "obsidian" or "magma_block" or "end_stone" or "clay":
+			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff" or "slowness_arrow" or "prismarine_crystals" or "prismarine_shard" or "soul_sand" or "soul_soil" or "ice" or "packed_ice" or "blue_ice" or "red_sand" or "snow_block" or "basalt" or "smooth_basalt" or "dripstone_block" or "calcite" or "blackstone" or "obsidian" or "magma_block" or "end_stone" or "clay_block":
 				send "%{cpv2.prefix}% &cそのアイテムは圧縮できません! 正しく入力しているか確認してください。"
 				stop
 			cpv2check(player, arg-1)
@@ -90,7 +90,7 @@ command /uncompressv2 [<text>]:
 			send "&e使用方法: &a/uncompressv2 &d<アイテム名>"
 			stop
 		else:
-			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff" or "slowness_arrow" or "prismarine_crystals" or "prismarine_shard" or "soul_sand" or "soul_soil" or "ice" or "packed_ice" or "blue_ice" or "red_sand" or "snow_block" or "basalt" or "smooth_basalt" or "dripstone_block" or "calcite" or "blackstone" or "obsidian" or "magma_block" or "end_stone" or "clay":
+			if arg-1 is not "rotten_flesh" or "bone" or "arrow" or "gunpowder" or "spider_eye" or "string" or "ender_pearl" or "magma_cream" or "blaze_rod" or "slime_ball" or "andesite" or "cobbled_deepslate" or "diorite" or "dirt" or "grass_block" or "gravel" or "granite" or "netherrack" or "sand" or "sandstone" or "stone" or "cobblestone" or "tuff" or "slowness_arrow" or "prismarine_crystals" or "prismarine_shard" or "soul_sand" or "soul_soil" or "ice" or "packed_ice" or "blue_ice" or "red_sand" or "snow_block" or "basalt" or "smooth_basalt" or "dripstone_block" or "calcite" or "blackstone" or "obsidian" or "magma_block" or "end_stone" or "clay_block":
 				send "%{cpv2.prefix}% &cそのアイテムは解凍できません! 正しく入力しているか確認してください。"
 				stop
 			uncpv2check(player, arg-1)
@@ -206,6 +206,10 @@ function cpv2check(p: player, i: text):
 	if {_cp.item} is "end_stone":
 		set {_cp.item2} to "end stone block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "clay_block":
+		set {_cp.item2} to "clay block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 	
 	#定義(0)
 	set {_compressed.%{_cp.item}%} to 0
@@ -291,7 +295,7 @@ function cpv2checkall(p: player):
 	set {_compressed.obsidian} to 0
 	set {_compressed.magma_block} to 0
 	set {_compressed.end_stone} to 0
-	set {_compressed.clay} to 0
+	set {_compressed.clay_block} to 0
 	#!新アイテム===
 	#invlock起動
 	set {cpv2.invlock.%{_p}%} to true
@@ -560,7 +564,7 @@ function cpv2checkall(p: player):
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c43"
 			set slot {_slot} of {_p}'s inventory to {_item}
-			add 1 to {_compressed.clay}
+			add 1 to {_compressed.clay_block}
 			add 1 to {_cpv2.counter}
 	#!新アイテム================================
 		wait a tick
@@ -827,11 +831,11 @@ function cpv2checkall(p: player):
 			remove {_compressed.end_stone} of {_item} from {_p}'s inventory
 			give {_compressed.end_stone} of {compressed_end_stone} to {_p}
 
-		if {_compressed.clay} is not 0:
-			send "&e粘土: &d%{_compressed.clay}%st" to {_p}
+		if {_compressed.clay_block} is not 0:
+			send "&e粘土: &d%{_compressed.clay_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c43"
-			remove {_compressed.clay} of {_item} from {_p}'s inventory
-			give {_compressed.clay} of {compressed_clay} to {_p}
+			remove {_compressed.clay_block} of {_item} from {_p}'s inventory
+			give {_compressed.clay_block} of {compressed_clay} to {_p}
 
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
 	
@@ -947,6 +951,10 @@ function uncpv2check(p: player, i: text):
 		set {_uncp.item2} to "end stone block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
+	if {_uncp.item} is "clay_block":
+		set {_uncp.item2} to "clay block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
 
 	#invlock起動
 	set {cpv2.invlock.%{_p}%} to true
@@ -989,15 +997,15 @@ function uncpv2check(p: player, i: text):
 #!=======[TAB_COMPLETE]=======
 
 on tab complete of "/compressv2":
-	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "clay" and "all"
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "clay_block" and "all"
 
 on tab complete of "/cpv2":
-	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "clay" and "all"
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "clay_block" and "all"
 
 on tab complete of "/uncompressv2":
-	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" and "clay"
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" and "clay_block"
 
 on tab complete of "/uncpv2":
-	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" and "clay"
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" and "clay_block"
 
 #!=======[TAB_COMPLETE]=======
