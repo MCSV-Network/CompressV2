@@ -914,6 +914,68 @@ function uncpv2check(p: player, i: text):
 		set {_uncp.item2} to "grass block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
 
+#!新アイテム===
+	if {_cp.item} is "slowness_arrow":
+		set {_cp.item2} to "slowness tipped arrow" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "prismarine_crystals":
+		set {_cp.item2} to "prismarine crystals" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "prismarine_shard":
+		set {_cp.item2} to "ender pearl" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+		set {_num} to 16
+		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
+
+	if {_cp.item} is "soul_sand":
+		set {_cp.item2} to "soul sand block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "soul_soil":
+		set {_cp.item2} to "soul soil" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "ice":
+		set {_cp.item2} to "ice block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "packed_ice":
+		set {_cp.item2} to "packed ice block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "blue_ice":
+		set {_cp.item2} to "block ice block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+
+	if {_cp.item} is "red_sand":
+		set {_cp.item2} to "red sand block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "snow_block":
+		set {_cp.item2} to "snow block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "smooth_basalt":
+		set {_cp.item2} to "smooth basalt" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+		set {_num} to 16
+		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
+
+	if {_cp.item} is "dripstone_block":
+		set {_cp.item2} to "dripstone block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "magma_block":
+		set {_cp.item2} to "magma block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "end_stone":
+		set {_cp.item2} to "end stone block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
 
 	#invlock起動
 	set {cpv2.invlock.%{_p}%} to true
