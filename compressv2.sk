@@ -687,115 +687,115 @@ function cpv2checkall(p: player):
 
 #!新アイテム==============
 		if {_compressed.slowness_arrow} is not 0:
-			send "&eクモの目: &d%{_compressed.slowness_arrow}%st" to {_p}
+			send "&e鈍化の矢: &d%{_compressed.slowness_arrow}%st" to {_p}
 			set 1st line of lore of {_item} to "&c25"
 			remove {_compressed.slowness_arrow} of {_item} from {_p}'s inventory
 			give {_compressed.slowness_arrow} of {compressed_slowness_arrow} to {_p}
 
 		if {_compressed.prismarine_crystals} is not 0:
-			send "&e糸: &d%{_compressed.prismarine_crystals}%st" to {_p}
+			send "&eプリズマリンクリスタル: &d%{_compressed.prismarine_crystals}%st" to {_p}
 			set 1st line of lore of {_item} to "&c26"
 			remove {_compressed.prismarine_crystals} of {_item} from {_p}'s inventory
 			give {_compressed.prismarine_crystals} of {compressed_prismarine_crystals} to {_p}
 
 		if {_compressed.prismarine_shard} is not 0:
-			send "&eエンダーパール: &d%{_compressed.prismarine_shard}%st" to {_p}
+			send "&eプリズマリンの欠片: &d%{_compressed.prismarine_shard}%st" to {_p}
 			set 1st line of lore of {_item} to "&c27"
 			remove {_compressed.prismarine_shard} of {_item} from {_p}'s inventory
 			give {_compressed.prismarine_shard} of {compressed_prismarine_shard} to {_p}
 
 		if {_compressed.soul_sand} is not 0:
-			send "&eマグマクリーム: &d%{_compressed.soul_sand}%st" to {_p}
+			send "&eソウルサンド: &d%{_compressed.soul_sand}%st" to {_p}
 			set 1st line of lore of {_item} to "&c28"
 			remove {_compressed.soul_sand} of {_item} from {_p}'s inventory
 			give {_compressed.soul_sand} of {compressed_soul_sand} to {_p}
 
 		if {_compressed.soul_soil} is not 0:
-			send "&eブレイズロッド: &d%{_compressed.soul_soil}%st" to {_p}
+			send "&eソウルソイル: &d%{_compressed.soul_soil}%st" to {_p}
 			set 1st line of lore of {_item} to "&c29"
 			remove {_compressed.soul_soil} of {_item} from {_p}'s inventory
 			give {_compressed.soul_soil} of {compressed_soul_soil} to {_p}
 
 		if {_compressed.ice} is not 0:
-			send "&eスライムボール: &d%{_compressed.ice}%st" to {_p}
+			send "&e氷: &d%{_compressed.ice}%st" to {_p}
 			set 1st line of lore of {_item} to "&c30"
 			remove {_compressed.ice} of {_item} from {_p}'s inventory
 			give {_compressed.ice} of {compressed_ice} to {_p}
 
 		if {_compressed.packed_ice} is not 0:
-			send "&e安山岩: &d%{_compressed.packed_ice}%st" to {_p}
+			send "&e氷塊: &d%{_compressed.packed_ice}%st" to {_p}
 			set 1st line of lore of {_item} to "&c31"
 			remove {_compressed.packed_ice} of {_item} from {_p}'s inventory
 			give {_compressed.packed_ice} of {compressed_packed_ice} to {_p}
 
 		if {_compressed.blue_ice} is not 0:
-			send "&e深層岩の丸石: &d%{_compressed.blue_ice}%st" to {_p}
+			send "&e青氷: &d%{_compressed.blue_ice}%st" to {_p}
 			set 1st line of lore of {_item} to "&c32"
 			remove {_compressed.blue_ice} of {_item} from {_p}'s inventory
 			give {_compressed.blue_ice} of {compressed_blue_ice} to {_p}
 
 		if {_compressed.red_sand} is not 0:
-			send "&e閃緑岩: &d%{_compressed.red_sand}%st" to {_p}
+			send "&e赤い砂: &d%{_compressed.red_sand}%st" to {_p}
 			set 1st line of lore of {_item} to "&c33"
 			remove {_compressed.red_sand} of {_item} from {_p}'s inventory
 			give {_compressed.red_sand} of {compressed_red_sand} to {_p}
 
 		if {_compressed.snow_block} is not 0:
-			send "&e土: &d%{_compressed.snow_block}%st" to {_p}
+			send "&e雪ブロック: &d%{_compressed.snow_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c34"
 			remove {_compressed.snow_block} of {_item} from {_p}'s inventory
 			give {_compressed.snow_block} of {compressed_snow_block} to {_p}
 
 		if {_compressed.basalt} is not 0:
-			send "&e草ブロック: &d%{_compressed.basalt}%st" to {_p}
+			send "&e玄武岩: &d%{_compressed.basalt}%st" to {_p}
 			set 1st line of lore of {_item} to "&c35"
 			remove {_compressed.basalt} of {_item} from {_p}'s inventory
 			give {_compressed.basalt} of {compressed_basalt} to {_p}
 
 		if {_compressed.smooth_basalt} is not 0:
-			send "&e砂利: &d%{_compressed.smooth_basalt}%st" to {_p}
+			send "&e滑らかな玄武岩: &d%{_compressed.smooth_basalt}%st" to {_p}
 			set 1st line of lore of {_item} to "&c36"
 			remove {_compressed.smooth_basalt} of {_item} from {_p}'s inventory
 			give {_compressed.smooth_basalt} of {compressed_smooth_basalt} to {_p}
 
 		if {_compressed.dripstone_block} is not 0:
-			send "&e花崗岩: &d%{_compressed.dripstone_block}%st" to {_p}
+			send "&e鍾乳石ブロック: &d%{_compressed.dripstone_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c37"
 			remove {_compressed.dripstone_block} of {_item} from {_p}'s inventory
 			give {_compressed.dripstone_block} of {compressed_dripstone_block} to {_p}
 
 		if {_compressed.calcite} is not 0:
-			send "&eネザーラック: &d%{_compressed.calcite}%st" to {_p}
+			send "&e方解石: &d%{_compressed.calcite}%st" to {_p}
 			set 1st line of lore of {_item} to "&c38"
 			remove {_compressed.calcite} of {_item} from {_p}'s inventory
 			give {_compressed.calcite} of {compressed_calcite} to {_p}
 
 		if {_compressed.blackstone} is not 0:
-			send "&e砂: &d%{_compressed.blackstone}%st" to {_p}
+			send "&eブラックストーン: &d%{_compressed.blackstone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c39"
 			remove {_compressed.blackstone} of {_item} from {_p}'s inventory
 			give {_compressed.blackstone} of {compressed_blackstone} to {_p}
 
 		if {_compressed.obsidian} is not 0:
-			send "&eネザーラック: &d%{_compressed.obsidian}%st" to {_p}
+			send "&e黒曜石: &d%{_compressed.obsidian}%st" to {_p}
 			set 1st line of lore of {_item} to "&c40"
 			remove {_compressed.obsidian} of {_item} from {_p}'s inventory
 			give {_compressed.obsidian} of {compressed_obsidian} to {_p}
 
 		if {_compressed.magma_block} is not 0:
-			send "&e砂: &d%{_compressed.magma_block}%st" to {_p}
+			send "&eマグマブロック: &d%{_compressed.magma_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c41"
 			remove {_compressed.magma_block} of {_item} from {_p}'s inventory
 			give {_compressed.magma_block} of {compressed_magma_block} to {_p}
 
 		if {_compressed.end_stone} is not 0:
-			send "&eネザーラック: &d%{_compressed.end_stone}%st" to {_p}
+			send "&eエンドストーン: &d%{_compressed.end_stone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c42"
 			remove {_compressed.end_stone} of {_item} from {_p}'s inventory
 			give {_compressed.end_stone} of {compressed_end_stone} to {_p}
 
 		if {_compressed.clay} is not 0:
-			send "&e砂: &d%{_compressed.clay}%st" to {_p}
+			send "&e粘土: &d%{_compressed.clay}%st" to {_p}
 			set 1st line of lore of {_item} to "&c43"
 			remove {_compressed.clay} of {_item} from {_p}'s inventory
 			give {_compressed.clay} of {compressed_sand} to {_p}
