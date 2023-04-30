@@ -134,7 +134,7 @@ function cpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 
-#!新アイテム===
+	#!新アイテム===
 	if {_cp.item} is "slowness_arrow":
 		set {_cp.item2} to "slowness tipped arrow" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
@@ -436,162 +436,122 @@ function cpv2checkall(p: player):
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.tuff}
 			add 1 to {_cpv2.counter}
-#!新アイテム================================
-#*25から40
-
+	#!新アイテム================================
 		if slot {_slot} of {_p}'s inventory is 64 of slowness tipped arrow:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c25"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.slowness_arrow}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of prismarine crystals:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c26"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.prismarine_crystals}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of prismarine shard:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c27"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.prismarine_shard}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of soul sand block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c28"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.soul_sand}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of soul soil:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c29"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.soul_soil}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of ice block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c30"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.ice}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of packed ice block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c31"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.packed_ice}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of blue ice block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c32"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.blue_ice}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of red sand block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c33"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.red_sand}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of snow block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c34"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.snow_block}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of basalt:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c35"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.basalt}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of smooth basalt:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c36"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.smooth_basalt}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of dripstone block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c37"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.dripstone_block}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of calcite:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c38"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.calcite}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of blackstone:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c39"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.blackstone}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of obsidian:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c40"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.obsidian}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of magma block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c41"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.magma_block}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of end stone block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c42"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.end_stone}
 			add 1 to {_cpv2.counter}
-
-
 		if slot {_slot} of {_p}'s inventory is 64 of clay block:
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c43"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.clay}
 			add 1 to {_cpv2.counter}
-
-
-#!新アイテム================================
+	#!新アイテム================================
 		wait a tick
 	
 	send "&7[debug] count: &a%{_cpv2.counter}%" to {_p}
@@ -747,7 +707,7 @@ function cpv2checkall(p: player):
 			remove {_compressed.tuff} of {_item} from {_p}'s inventory
 			give {_compressed.tuff} of {compressed_tuff} to {_p}
 
-#!新アイテム==============
+	#!新アイテム==============
 		if {_compressed.slowness_arrow} is not 0:
 			send "&e鈍化の矢: &d%{_compressed.slowness_arrow}%st" to {_p}
 			set 1st line of lore of {_item} to "&c25"
@@ -914,7 +874,7 @@ function uncpv2check(p: player, i: text):
 		set {_uncp.item2} to "grass block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
 
-#!新アイテム===
+	#!新アイテム===
 	if {_uncp.item} is "slowness_arrow":
 		set {_uncp.item2} to "slowness tipped arrow" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
@@ -1013,3 +973,20 @@ function uncpv2check(p: player, i: text):
 		send "&7*<none> = Success" to {_p}
 		stop
 #!=======[FUNCTION]=======
+
+
+#!=======[TAB_COMPLETE]=======
+
+on tab complete of "/compressv2":
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "clay" and "all"
+
+on tab complete of "/cpv2":
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "clay" and "all"
+
+on tab complete of "/uncompressv2":
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" and "clay"
+
+on tab complete of "/uncpv2":
+	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" and "clay"
+
+#!=======[TAB_COMPLETE]=======
