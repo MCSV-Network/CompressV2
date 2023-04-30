@@ -133,6 +133,42 @@ function cpv2check(p: player, i: text):
 		set {_cp.item2} to "grass block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
+
+#!新アイテム===
+	if {_cp.item} is "slowness_arrow":
+		set {_cp.item2} to "slowness tipped arrow" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "prismarine_crystals":
+		set {_cp.item2} to "prismarine crystals" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "prismarine_shard":
+		set {_cp.item2} to "ender pearl" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+		set {_num} to 16
+		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
+
+	if {_cp.item} is "magma_cream":
+		set {_cp.item2} to "magma cream" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "blaze_rod":
+		set {_cp.item2} to "blaze rod" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "slime_ball":
+		set {_cp.item2} to "slime ball" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "cobbled_deepslate":
+		set {_cp.item2} to "cobbled deepslate" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
+	if {_cp.item} is "grass_block":
+		set {_cp.item2} to "grass block" parsed as itemtype
+		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
+
 	
 	#定義(0)
 	set {_compressed.%{_cp.item}%} to 0
@@ -865,6 +901,9 @@ function uncpv2check(p: player, i: text):
 		send "&7[debug] check: &a%{_tmp.amount}%" to {_p}
 		if {_p} doesn't have enough space for {_tmp.amount} of stone:
 			send "&cError! インベントリの空きがありません!" to {_p}
+			delete {cpv2.invlock.%{_p}%}
+			send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
+			send "&7*<none> = Success" to {_p}
 			stop
 		remove all {compressed_%{_uncp.item}%} from {_p}'s inventory
 		give {_tmp.amount} of {_uncp.item2} to {_p}
