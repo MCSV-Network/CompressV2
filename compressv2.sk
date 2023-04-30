@@ -764,17 +764,41 @@ function cpv2checkall(p: player):
 			remove {_compressed.dripstone_block} of {_item} from {_p}'s inventory
 			give {_compressed.dripstone_block} of {compressed_dripstone_block} to {_p}
 
-		if {_compressed.netherrack} is not 0:
-			send "&eネザーラック: &d%{_compressed.netherrack}%st" to {_p}
+		if {_compressed.calcite} is not 0:
+			send "&eネザーラック: &d%{_compressed.calcite}%st" to {_p}
 			set 1st line of lore of {_item} to "&c38"
-			remove {_compressed.netherrack} of {_item} from {_p}'s inventory
-			give {_compressed.netherrack} of {compressed_netherrack} to {_p}
+			remove {_compressed.calcite} of {_item} from {_p}'s inventory
+			give {_compressed.calcite} of {compressed_calcite} to {_p}
 
-		if {_compressed.sand} is not 0:
-			send "&e砂: &d%{_compressed.sand}%st" to {_p}
+		if {_compressed.blackstone} is not 0:
+			send "&e砂: &d%{_compressed.blackstone}%st" to {_p}
 			set 1st line of lore of {_item} to "&c39"
-			remove {_compressed.sand} of {_item} from {_p}'s inventory
-			give {_compressed.sand} of {compressed_sand} to {_p}
+			remove {_compressed.blackstone} of {_item} from {_p}'s inventory
+			give {_compressed.blackstone} of {compressed_blackstone} to {_p}
+
+		if {_compressed.obsidian} is not 0:
+			send "&eネザーラック: &d%{_compressed.obsidian}%st" to {_p}
+			set 1st line of lore of {_item} to "&c40"
+			remove {_compressed.obsidian} of {_item} from {_p}'s inventory
+			give {_compressed.obsidian} of {compressed_obsidian} to {_p}
+
+		if {_compressed.magma_block} is not 0:
+			send "&e砂: &d%{_compressed.magma_block}%st" to {_p}
+			set 1st line of lore of {_item} to "&c41"
+			remove {_compressed.magma_block} of {_item} from {_p}'s inventory
+			give {_compressed.magma_block} of {compressed_magma_block} to {_p}
+
+		if {_compressed.end_stone} is not 0:
+			send "&eネザーラック: &d%{_compressed.end_stone}%st" to {_p}
+			set 1st line of lore of {_item} to "&c42"
+			remove {_compressed.end_stone} of {_item} from {_p}'s inventory
+			give {_compressed.end_stone} of {compressed_end_stone} to {_p}
+
+		if {_compressed.clay} is not 0:
+			send "&e砂: &d%{_compressed.clay}%st" to {_p}
+			set 1st line of lore of {_item} to "&c43"
+			remove {_compressed.clay} of {_item} from {_p}'s inventory
+			give {_compressed.clay} of {compressed_sand} to {_p}
 
 		send "&e合計: &a%{_cpv2.counter}%st" to {_p}
 	
