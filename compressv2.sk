@@ -898,15 +898,15 @@ function uncpv2check(p: player, i: text):
 	set {_n} to amount of {compressed_%{_uncp.item}%} in {_p}'s inventory
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
-		send "&7[debug] check: &a%{_tmp.amount}%" to {_p}
-		if {_p} doesn't have enough space for {_tmp.amount} of stone:
-			send "&cError! インベントリの空きがありません!" to {_p}
-			delete {cpv2.invlock.%{_p}%}
-			send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
-			send "&7*<none> = Success" to {_p}
-			stop
-		remove all {compressed_%{_uncp.item}%} from {_p}'s inventory
-		give {_tmp.amount} of {_uncp.item2} to {_p}
+		loop {_n} times:
+			remove 1 {compressed_%{_uncp.item}%} from {_p}'s inventory
+			if {_p} doesn't have enough space for 64 of stone:
+				send "&cError! インベントリの空きがありません!" to {_p}
+				delete {cpv2.invlock.%{_p}%}
+				send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
+				send "&7*<none> = Success" to {_p}
+				stop
+			give 64 of {_uncp.item2} to {_p}
 		send "%{cpv2.prefix}% &aSuccess! &e解凍が完了しました!" to {_p}
 		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
 		#invlock解除
