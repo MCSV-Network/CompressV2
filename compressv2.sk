@@ -443,7 +443,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of red sand block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c30"
+			set 1st line of lore of {_item} to "&c33"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.red_sand}
 			add 1 to {_cpv2.counter}
@@ -451,7 +451,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of snow block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c31"
+			set 1st line of lore of {_item} to "&c34"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.snow_block}
 			add 1 to {_cpv2.counter}
@@ -459,7 +459,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of basalt:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c32"
+			set 1st line of lore of {_item} to "&c35"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.basalt}
 			add 1 to {_cpv2.counter}
@@ -467,7 +467,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of smooth basalt:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c33"
+			set 1st line of lore of {_item} to "&c36"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.smooth_basalt}
 			add 1 to {_cpv2.counter}
@@ -475,7 +475,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of dripstone block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c34"
+			set 1st line of lore of {_item} to "&c37"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.dripstone_block}
 			add 1 to {_cpv2.counter}
@@ -483,7 +483,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of calcite:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c35"
+			set 1st line of lore of {_item} to "&c38"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.calcite}
 			add 1 to {_cpv2.counter}
@@ -491,7 +491,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of blackstone:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c36"
+			set 1st line of lore of {_item} to "&c39"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.blackstone}
 			add 1 to {_cpv2.counter}
@@ -499,7 +499,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of obsidian:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c37"
+			set 1st line of lore of {_item} to "&c40"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.obsidian}
 			add 1 to {_cpv2.counter}
@@ -507,7 +507,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of magma block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c38"
+			set 1st line of lore of {_item} to "&c41"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.magma_block}
 			add 1 to {_cpv2.counter}
@@ -515,7 +515,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of end stone block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c39"
+			set 1st line of lore of {_item} to "&c42"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.end_stone}
 			add 1 to {_cpv2.counter}
@@ -523,7 +523,7 @@ function cpv2checkall(p: player):
 
 		if slot {_slot} of {_p}'s inventory is 64 of clay block:
 			set slot {_slot} of {_p}'s inventory to air
-			set 1st line of lore of {_item} to "&c40"
+			set 1st line of lore of {_item} to "&c43"
 			set slot {_slot} of {_p}'s inventory to {_item}
 			add 1 to {_compressed.clay}
 			add 1 to {_cpv2.counter}
@@ -728,57 +728,51 @@ function cpv2checkall(p: player):
 			remove {_compressed.packed_ice} of {_item} from {_p}'s inventory
 			give {_compressed.packed_ice} of {compressed_packed_ice} to {_p}
 
-		if {_compressed.cobbled_deepslate} is not 0:
-			send "&e深層岩の丸石: &d%{_compressed.cobbled_deepslate}%st" to {_p}
+		if {_compressed.blue_ice} is not 0:
+			send "&e深層岩の丸石: &d%{_compressed.blue_ice}%st" to {_p}
 			set 1st line of lore of {_item} to "&c32"
-			remove {_compressed.cobbled_deepslate} of {_item} from {_p}'s inventory
-			give {_compressed.cobbled_deepslate} of {compressed_cobbled_deepslate} to {_p}
+			remove {_compressed.blue_ice} of {_item} from {_p}'s inventory
+			give {_compressed.blue_ice} of {compressed_blue_ice} to {_p}
 
-		if {_compressed.deepslate} is not 0:
-			send "&e深層岩: &d%{_compressed.deepslate}%st" to {_p}
+		if {_compressed.red_sand} is not 0:
+			send "&e閃緑岩: &d%{_compressed.red_sand}%st" to {_p}
 			set 1st line of lore of {_item} to "&c33"
-			remove {_compressed.deepslate} of {_item} from {_p}'s inventory
-			give {_compressed.deepslate} of {compressed_deepslate} to {_p}
+			remove {_compressed.red_sand} of {_item} from {_p}'s inventory
+			give {_compressed.red_sand} of {compressed_red_sand} to {_p}
 
-		if {_compressed.diorite} is not 0:
-			send "&e閃緑岩: &d%{_compressed.diorite}%st" to {_p}
+		if {_compressed.snow_block} is not 0:
+			send "&e土: &d%{_compressed.snow_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c34"
-			remove {_compressed.diorite} of {_item} from {_p}'s inventory
-			give {_compressed.diorite} of {compressed_diorite} to {_p}
+			remove {_compressed.snow_block} of {_item} from {_p}'s inventory
+			give {_compressed.snow_block} of {compressed_snow_block} to {_p}
 
-		if {_compressed.dirt} is not 0:
-			send "&e土: &d%{_compressed.dirt}%st" to {_p}
+		if {_compressed.basalt} is not 0:
+			send "&e草ブロック: &d%{_compressed.basalt}%st" to {_p}
 			set 1st line of lore of {_item} to "&c35"
-			remove {_compressed.dirt} of {_item} from {_p}'s inventory
-			give {_compressed.dirt} of {compressed_dirt} to {_p}
+			remove {_compressed.basalt} of {_item} from {_p}'s inventory
+			give {_compressed.basalt} of {compressed_basalt} to {_p}
 
-		if {_compressed.grass_block} is not 0:
-			send "&e草ブロック: &d%{_compressed.grass_block}%st" to {_p}
+		if {_compressed.smooth_basalt} is not 0:
+			send "&e砂利: &d%{_compressed.smooth_basalt}%st" to {_p}
 			set 1st line of lore of {_item} to "&c36"
-			remove {_compressed.grass_block} of {_item} from {_p}'s inventory
-			give {_compressed.grass_block} of {compressed_grass_block} to {_p}
+			remove {_compressed.smooth_basalt} of {_item} from {_p}'s inventory
+			give {_compressed.smooth_basalt} of {compressed_smooth_basalt} to {_p}
 
-		if {_compressed.gravel} is not 0:
-			send "&e砂利: &d%{_compressed.gravel}%st" to {_p}
+		if {_compressed.dripstone_block} is not 0:
+			send "&e花崗岩: &d%{_compressed.dripstone_block}%st" to {_p}
 			set 1st line of lore of {_item} to "&c37"
-			remove {_compressed.gravel} of {_item} from {_p}'s inventory
-			give {_compressed.gravel} of {compressed_gravel} to {_p}
-
-		if {_compressed.granite} is not 0:
-			send "&e花崗岩: &d%{_compressed.granite}%st" to {_p}
-			set 1st line of lore of {_item} to "&c38"
-			remove {_compressed.granite} of {_item} from {_p}'s inventory
-			give {_compressed.granite} of {compressed_granite} to {_p}
+			remove {_compressed.dripstone_block} of {_item} from {_p}'s inventory
+			give {_compressed.dripstone_block} of {compressed_dripstone_block} to {_p}
 
 		if {_compressed.netherrack} is not 0:
 			send "&eネザーラック: &d%{_compressed.netherrack}%st" to {_p}
-			set 1st line of lore of {_item} to "&c39"
+			set 1st line of lore of {_item} to "&c38"
 			remove {_compressed.netherrack} of {_item} from {_p}'s inventory
 			give {_compressed.netherrack} of {compressed_netherrack} to {_p}
 
 		if {_compressed.sand} is not 0:
 			send "&e砂: &d%{_compressed.sand}%st" to {_p}
-			set 1st line of lore of {_item} to "&c40"
+			set 1st line of lore of {_item} to "&c39"
 			remove {_compressed.sand} of {_item} from {_p}'s inventory
 			give {_compressed.sand} of {compressed_sand} to {_p}
 
