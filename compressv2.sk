@@ -31,6 +31,17 @@ on skript load:
 	send "Created by ringoXD" to console
 	send "Github: &bhttps://github.com/MCSV-Network/CompressV2" to console
 	send "&b=================" to console
+
+
+command /compressv2gui:
+	aliases: /cpv2gui
+	trigger:
+		player command "/cp cpv2gui"
+
+command /uncompressv2gui:
+	aliases: /uncpv2gui
+	trigger:
+		player command "/cp uncpv2gui"
 #!=======[DO NOT EDIT]=======
 
 
