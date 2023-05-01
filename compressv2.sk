@@ -27,7 +27,7 @@ command /delcompressitem [<text>]:
 #読み込み時のメッセージ
 on skript load:
 	send "&b=================" to console
-	send "&eCompress&bV2 &7- &av0.5" to console
+	send "&eCompress&bV2.5" to console
 	send "Created by ringoXD" to console
 	send "Github: &bhttps://github.com/MCSV-Network/CompressV2" to console
 	send "&b=================" to console
