@@ -162,7 +162,7 @@ function cpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "prismarine_shard":
-		set {_cp.item2} to "ender pearl" parsed as itemtype
+		set {_cp.item2} to "prismarine shard" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 		set {_num} to 16
 		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
