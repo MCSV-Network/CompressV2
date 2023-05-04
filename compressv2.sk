@@ -906,7 +906,7 @@ function uncpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
 
 	if {_uncp.item} is "prismarine_shard":
-		set {_uncp.item2} to "prismarine_shard" parsed as itemtype
+		set {_uncp.item2} to "prismarine shard" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
 
 	if {_uncp.item} is "soul_sand":
