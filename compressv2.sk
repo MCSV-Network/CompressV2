@@ -503,7 +503,7 @@ function cpv2checkall(p: player):
 			add 1 to {_compressed.packed_ice}
 			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of blue ice block:
-			send "&7[debug] &aslot is blue ice block"
+			send "&7[debug] &aslot is blue ice block" to {_p}
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c32"
 			set slot {_slot} of {_p}'s inventory to {_item}
@@ -528,7 +528,7 @@ function cpv2checkall(p: player):
 			add 1 to {_compressed.basalt}
 			add 1 to {_cpv2.counter}
 		if slot {_slot} of {_p}'s inventory is 64 of smooth basalt:
-			send "&7[debug] &aslot is blue ice block"
+			send "&7[debug] &aslot is blue ice block" to {_p}
 			set slot {_slot} of {_p}'s inventory to air
 			set 1st line of lore of {_item} to "&c36"
 			set slot {_slot} of {_p}'s inventory to {_item}
