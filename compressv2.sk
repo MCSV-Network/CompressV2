@@ -24,6 +24,13 @@ command /delcompressitem [<text>]:
 		delete {compressed_%{_name}%}
 		send "Success. name: {compressed_%{_name}%} - %{compressed_%{_name}%}%"
 		stop
+
+#?debug
+command /isfoundcpv2item [<text>]:
+	permission: admin
+	trigger:
+		set {_i} to arg-1
+		send "%{compressed_%{_i}%}%"
 #読み込み時のメッセージ
 on skript load:
 	send "&b=================" to console
