@@ -184,7 +184,7 @@ function cpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "blue_ice":
-		set {_cp.item2} to "block ice" parsed as itemtype
+		set {_cp.item2} to "bluc ice block" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 
