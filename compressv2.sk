@@ -861,6 +861,7 @@ function cpv2checkall(p: player):
 function uncpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7解凍中..." to {_p}
 	#定義
+	set {_num} to 64
 	set {_uncp.item} to {_i}
 	send "&7[debug] item: &a%{_uncp.item}%" to {_p}
 	set {_uncp.item2} to {_i} parsed as itemtype
@@ -909,9 +910,8 @@ function uncpv2check(p: player, i: text):
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
 
 	if {_uncp.item} is "prismarine_shard":
-		set {_uncp.item2} to "ender pearl" parsed as itemtype
+		set {_uncp.item2} to "prismarine_shard" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
-		set {_num} to 16
 		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
 
 	if {_uncp.item} is "soul_sand":
@@ -946,7 +946,6 @@ function uncpv2check(p: player, i: text):
 	if {_uncp.item} is "smooth_basalt":
 		set {_uncp.item2} to "smooth basalt" parsed as itemtype
 		send "&7[debug] item2(replaced): &e%{_uncp.item2}%" to {_p}
-		set {_num} to 16
 		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
 
 	if {_uncp.item} is "dripstone_block":
@@ -976,6 +975,9 @@ function uncpv2check(p: player, i: text):
 	set {_n} to amount of {compressed_%{_uncp.item}%} in {_p}'s inventory
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
+		#?fix ender pearl amount
+		if {_uncp.item} is "ender_pearl":
+			set {_tmp.amount} to {_n} * 16
 		loop {_n} times:
 			remove 1 of {compressed_%{_uncp.item}%} from {_p}'s inventory
 			#!空きなかったらその時点で解凍が中断されるので残りの圧縮されたアイテムはスキップされる
@@ -986,7 +988,7 @@ function uncpv2check(p: player, i: text):
 				send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
 				send "&7*<none> = Success" to {_p}
 				stop
-			give 64 of {_uncp.item2} to {_p}
+			give {_num} of {_uncp.item2} to {_p}
 			wait a tick
 		send "%{cpv2.prefix}% &aSuccess! &e解凍が完了しました!" to {_p}
 		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
