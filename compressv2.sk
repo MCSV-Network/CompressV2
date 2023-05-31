@@ -70,7 +70,7 @@ on inventory click:
 
 #compressV2
 #*圧縮コマンド
-command /compressv2 [<text>]:
+command /compress [<text>]:
 	aliases: /cpv2
 	trigger:
 		if arg-1 is not set:
@@ -87,7 +87,7 @@ command /compressv2 [<text>]:
 				stop
 			cpv2check(player, arg-1)
 
-command /uncompressv2 [<text>]:
+command /uncompress [<text>]:
 	aliases: /uncpv2
 	trigger:
 		if arg-1 is not set:
@@ -1003,13 +1003,13 @@ function uncpv2check(p: player, i: text):
 
 #!=======[TAB_COMPLETE]=======
 
-on tab complete of "/compressv2":
+on tab complete of "/compress":
 	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "deepslate", "clay_block" and "all"
 
 on tab complete of "/cpv2":
 	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "end_stone" , "deepslate", "clay_block" and "all"
 
-on tab complete of "/uncompressv2":
+on tab complete of "/uncompress":
 	set tab completions for position 1 to "rotten_flesh" , "bone" , "arrow" , "gunpowder" , "spider_eye" , "string" , "ender_pearl" , "magma_cream" , "blaze_rod" , "slime_ball" , "andesite" , "cobbled_deepslate" , "diorite" , "dirt" , "grass_block" , "gravel" , "granite" , "netherrack" , "sand" , "sandstone" , "stone" , "cobblestone" , "tuff" , "slowness_arrow" , "prismarine_crystals" , "prismarine_shard" , "soul_sand" , "soul_soil" , "ice" , "packed_ice" , "blue_ice" , "red_sand" , "snow_block" , "basalt" , "smooth_basalt" , "dripstone_block" , "calcite" , "blackstone" , "obsidian" , "magma_block" , "deepslate", "end_stone" and "clay_block"
 
 on tab complete of "/uncpv2":
