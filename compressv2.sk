@@ -112,119 +112,87 @@ command /uncompress [<text>]:
 function cpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
 	set {_cp.item} to {_i}
-	send "&7[debug] item: &a%{_cp.item}%" to {_p}
 	set {_cp.item2} to {_i} parsed as itemtype
-	send "&7[debug] item2: &a%{_cp.item2}%" to {_p}
 	set {_num} to 64
-	send "&7[debug] CP-DetectNum: &a%{_num}%" to {_p}
 	#*置き換え
 	if {_cp.item} is "rotten_flesh":
 		set {_cp.item2} to "rotten flesh" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "spider_eye":
 		set {_cp.item2} to "spider eye" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "ender_pearl":
 		set {_cp.item2} to "ender pearl" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 		set {_num} to 16
-		send "&7[debug] &cChanged&7 CP-DetectNum: &a%{_num}%" to {_p}
 
 	if {_cp.item} is "magma_cream":
 		set {_cp.item2} to "magma cream" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "blaze_rod":
 		set {_cp.item2} to "blaze rod" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "slime_ball":
 		set {_cp.item2} to "slime ball" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "cobbled_deepslate":
 		set {_cp.item2} to "cobbled deepslate" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "grass_block":
 		set {_cp.item2} to "grass block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
-
-	#!新アイテム===
 	if {_cp.item} is "slowness_arrow":
 		set {_cp.item2} to "slowness tipped arrow" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "prismarine_crystals":
 		set {_cp.item2} to "prismarine crystals" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "prismarine_shard":
 		set {_cp.item2} to "prismarine shard" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "soul_sand":
 		set {_cp.item2} to "soul sand block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "soul_soil":
 		set {_cp.item2} to "soul soil" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "ice":
 		set {_cp.item2} to "ice block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "packed_ice":
 		set {_cp.item2} to "packed ice block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "blue_ice":
 		set {_cp.item2} to "blue ice block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
-
 
 	if {_cp.item} is "red_sand":
 		set {_cp.item2} to "red sand block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "snow_block":
 		set {_cp.item2} to "snow block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "smooth_basalt":
 		set {_cp.item2} to "smooth basalt" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "dripstone_block":
 		set {_cp.item2} to "dripstone block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "magma_block":
 		set {_cp.item2} to "magma block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "end_stone":
 		set {_cp.item2} to "end stone block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 
 	if {_cp.item} is "clay_block":
 		set {_cp.item} to "clay"
 		set {_cp.item2} to "clay block" parsed as itemtype
-		send "&7[debug] item2(replaced): &e%{_cp.item2}%" to {_p}
 	
 	#定義(0)
 	set {_compressed.%{_cp.item}%} to 0
 	#invlock起動
 	set {cpv2.invlock.%{_p}%} to true
-	send "&7[debug] cpv2.invlock: &a%{cpv2.invlock.%{_p}%}%" to {_p}
 	#圧縮開始
 	set {_item} to sunflower named "&e圧縮中..."
 	set 1st line of lore of {_item} to "&cERROR! (Code issue)"
-	send "&7[debug] Looping(invcheck)" to {_p}
 	set {_cpv2.counter} to 0
 	loop 36 times:
 		add 1 to {_slot}
@@ -235,8 +203,6 @@ function cpv2check(p: player, i: text):
 			add 1 to {_compressed.%{_cp.item}%}
 			add 1 to {_cpv2.counter}
 		wait a tick
-	
-	send "&7[debug] count: &a%{_cpv2.counter}%" to {_p}
 
 
 	if {_cpv2.counter} is 0:
@@ -244,14 +210,11 @@ function cpv2check(p: player, i: text):
 	
 	if {_cpv2.counter} >= 1:
 		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
-		send "&7[debug] cp.item: &a%{_cp.item}%&7, cp.item2: &a%{_cp.item2}%" to {_p}
 		send "&b圧縮されたアイテム: &e%{_cp.item}% &7(%{_compressed.%{_cp.item}%}%st)" to {_p}
 		remove {_compressed.%{_cp.item}%} of {_item} from {_p}'s inventory
 		give {_compressed.%{_cp.item}%} of {compressed_%{_cp.item}%} to {_p}
 	#invlock解除
 	delete {cpv2.invlock.%{_p}%}
-	send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
-	send "&7*<none> = Success" to {_p}
 
 #*CPV2 圧縮用function(ALL)
 function cpv2checkall(p: player):
