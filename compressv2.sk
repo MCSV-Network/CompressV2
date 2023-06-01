@@ -1,4 +1,4 @@
-#Compress V2.5
+#Compress V2
 #by ringo360xd
 
 
@@ -6,6 +6,7 @@
 #定義づけ(prefix)
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
+	{cpv2.version} = "2.51"
 
 #*変数追加用
 command /setcompresseditem [<text>]:
@@ -34,7 +35,7 @@ command /isfoundcpv2item [<text>]:
 #読み込み時のメッセージ
 on skript load:
 	send "&b=================" to console
-	send "&eCompress&bV2.5" to console
+	send "&eCompress&bV%{cpv2.version}%" to console
 	send "Created by ringoXD" to console
 	send "Github: &bhttps://github.com/MCSV-Network/CompressV2" to console
 	send "&b=================" to console
