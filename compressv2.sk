@@ -815,7 +815,6 @@ function uncpv2check(p: player, i: text):
 	#定義
 	set {_num} to 64
 	set {_uncp.item} to {_i}
-	send "&7[debug] item: &a%{_uncp.item}%" to {_p}
 	set {_uncp.item2} to {_i} parsed as itemtype
 	#*置き換え
 	if {_uncp.item} is "rotten_flesh":
@@ -897,7 +896,6 @@ function uncpv2check(p: player, i: text):
 	#解凍開始
 	set {_tmp.item} to sunflower named "&e解凍中..."
 	set 1st line of lore of {_tmp.item} to "&cERROR! (Code issue)"
-	send "&7[debug] target: &a%{compressed_%{_uncp.item}%}%" to {_p}
 	set {_n} to amount of {compressed_%{_uncp.item}%} in {_p}'s inventory
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
@@ -911,8 +909,6 @@ function uncpv2check(p: player, i: text):
 			if {_p} doesn't have enough space for 64 of stone:
 				send "&cError! インベントリの空きがありません!解凍が中断されました!" to {_p}
 				delete {cpv2.invlock.%{_p}%}
-				send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
-				send "&7*<none> = Success" to {_p}
 				stop
 			give {_num} of {_uncp.item2} to {_p}
 			wait a tick
@@ -920,15 +916,11 @@ function uncpv2check(p: player, i: text):
 		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
 		#invlock解除
 		delete {cpv2.invlock.%{_p}%}
-		send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
-		send "&7*<none> = Success" to {_p}
 		stop
 	if {_n} = 0:
 		send "%{cpv2.prefix}% &cError! 対象のアイテムが見つかりませんでした!" to {_p}
 		#invlock解除
 		delete {cpv2.invlock.%{_p}%}
-		send "&7[debug] cpv2.invlock: &c%{cpv2.invlock.%{_p}%}%" to {_p}
-		send "&7*<none> = Success" to {_p}
 		stop
 #!=======[FUNCTION]=======
 
