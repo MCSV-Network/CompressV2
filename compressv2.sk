@@ -1,7 +1,4 @@
-#Compress V2
-#by ringo360xd
-
-
+#Compress V2 - Created by ringo360xd
 #!=======[DO NOT EDIT]=======
 #定義づけ(prefix)
 Variables:
@@ -27,7 +24,6 @@ command /delcompressitem [<text>]:
 		delete {compressed_%{_name}%}
 		send "Success. name: {compressed_%{_name}%} - %{compressed_%{_name}%}%"
 		stop
-
 #?debug
 command /isfoundcpv2item [<text>]:
 	permission: admin
@@ -52,12 +48,11 @@ on load:
 		send "[ComprssV2] New version aviliable! {@version} -> %{_v}%" to console
 		send "Download: https://github.com/MCSV-Network/CompressV2/" to console	
 
-
+#?For CommandPanels plugin
 command /compressv2gui:
 	aliases: /cpv2gui
 	trigger:
 		player command "/cp cpv2gui"
-
 command /uncompressv2gui:
 	aliases: /uncpv2gui
 	trigger:
