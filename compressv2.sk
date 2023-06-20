@@ -118,6 +118,7 @@ command /uncompress [<text>]:
 #*CPV2 圧縮用function
 function cpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
+	play sound "entity.chicken.egg" with volume 2 and pitch 0.5 to player
 	set {_cp.item} to {_i}
 	set {_cp.item2} to {_i} parsed as itemtype
 	set {_num} to 64
@@ -214,9 +215,11 @@ function cpv2check(p: player, i: text):
 
 	if {_cpv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
+		play sound "block.note_block.bass" with volume 2 and pitch 1 to player
 	
 	if {_cpv2.counter} >= 1:
 		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
+		play sound "entity.chicken.egg" with volume 2 and pitch 2 to player
 		send "&b圧縮されたアイテム: &e%{_cp.item}% &7(%{_compressed.%{_cp.item}%}%st)" to {_p}
 		remove {_compressed.%{_cp.item}%} of {_item} from {_p}'s inventory
 		give {_compressed.%{_cp.item}%} of {compressed_%{_cp.item}%} to {_p}
@@ -227,6 +230,7 @@ function cpv2check(p: player, i: text):
 function cpv2checkall(p: player):
 	#何も設定しない方が楽だけどバグるみたいなので0に設定
 	send "%{cpv2.prefix}% &7圧縮中..." to {_p}
+	play sound "entity.chicken.egg" with volume 2 and pitch 0.5 to player
 	set {_compressed.rotten_flesh} to 0
 	set {_compressed.bone} to 0
 	set {_compressed.arrow} to 0
@@ -544,9 +548,11 @@ function cpv2checkall(p: player):
 	#圧縮結果の表示とアイテム付与
 	if {_cpv2.counter} is 0:
 		send "%{cpv2.prefix}% &cError! 圧縮できるアイテムがありませんでした!" to {_p}
+		play sound "block.note_block.bass" with volume 2 and pitch 1 to player
 	
 	if {_cpv2.counter} >= 1:
 		send "%{cpv2.prefix}% &aSuccess! &e圧縮が完了しました!" to {_p}
+		play sound "entity.chicken.egg" with volume 2 and pitch 2 to player
 		send "&7==&b圧縮されたアイテムの内容&7==" to {_p}
 
 		if {_compressed.rotten_flesh} is not 0:
@@ -819,6 +825,7 @@ function cpv2checkall(p: player):
 #*CPV2 解凍用function
 function uncpv2check(p: player, i: text):
 	send "%{cpv2.prefix}% &7解凍中..." to {_p}
+	play sound "entity.chicken.egg" with volume 2 and pitch 0.5 to player
 	#定義
 	set {_num} to 64
 	set {_uncp.item} to {_i}
@@ -921,11 +928,13 @@ function uncpv2check(p: player, i: text):
 			#TODO: はよ直せ
 			if {_p} doesn't have enough space for 64 of stone:
 				send "&cError! インベントリの空きがありません!解凍が中断されました!" to {_p}
+				play sound "block.note_block.bass" with volume 2 and pitch 1 to player
 				delete {cpv2.invlock.%{_p}%}
 				stop
 			give {_num} of {_uncp.item2} to {_p}
 			wait a tick
 		send "%{cpv2.prefix}% &aSuccess! &e解凍が完了しました!" to {_p}
+		play sound "entity.chicken.egg" with volume 2 and pitch 2 to player
 		if {_n2} is set:
 			add {_n2} to {_n}
 		send "&b解凍されたアイテム: &e%{_uncp.item}% &7(%{_n}%st)" to {_p}
@@ -934,6 +943,7 @@ function uncpv2check(p: player, i: text):
 		stop
 	if {_n} = 0:
 		send "%{cpv2.prefix}% &cError! 対象のアイテムが見つかりませんでした!" to {_p}
+		play sound "block.note_block.bass" with volume 2 and pitch 1 to player
 		#invlock解除
 		delete {cpv2.invlock.%{_p}%}
 		stop
@@ -948,6 +958,7 @@ function olduncp(p: player, a: number, i: text, i2: text):
 		#TODO: はよ直せ
 		if {_p} doesn't have enough space for 64 of stone:
 			send "&cError! インベントリの空きがありません!解凍が中断されました!" to {_p}
+			play sound "block.note_block.bass" with volume 2 and pitch 1 to player
 			delete {cpv2.invlock.%{_p}%}
 			stop
 		give 64 of {_i3} to {_p}
