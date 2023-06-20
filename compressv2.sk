@@ -35,7 +35,7 @@ command /isfoundcpv2item [<text>]:
 		set {_i} to arg-1
 		send "%{compressed_%{_i}%}%"
 #読み込み時のメッセージ
-on skript load:
+on load:
 	send "&b=================" to console
 	send "&eCompress&bV2 ({@version})" to console
 	send "Created by ringoXD" to console
