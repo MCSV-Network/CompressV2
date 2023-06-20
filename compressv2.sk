@@ -4,7 +4,7 @@
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 options:
-	version: 2.60
+	version: 2.61
 	cpv2api: https://github.com/MCSV-Network/CompressV2/raw/main/cpv2version.txt
 
 #*変数追加用
@@ -44,9 +44,20 @@ on load:
 		stop
 	if {_v} = "{@version}":
 		send "[CompressV2] No updates aviliable." to console
+		delete {cpv2.update}
+		delete {cpv2.latest}
 	else:
 		send "[ComprssV2] New version aviliable! {@version} -> %{_v}%" to console
+		set {cpv2.update} to true
+		set {cpv2.latest} to {_v}
 		send "Download: https://github.com/MCSV-Network/CompressV2/" to console	
+on join:
+	if {cpv2.update} is "true":
+		if player has permission "admin":
+			send "%{cpv2.prefix}%&aNew version aviliable!"
+			send "&c{@version} &e-> &a%{cpv2.latest}%"
+			send "&eDownload: &bhttps://github.com/MCSV-Network/CompressV2/"
+
 
 #?For CommandPanels plugin
 command /compressv2gui:
