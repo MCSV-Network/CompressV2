@@ -937,6 +937,7 @@ function uncpv2check(p: player, i: text):
 
 function olduncp(p: player, a: number, i: text, i2: text):
 	loop {_a} times:
+		debug({_p}, "a: %{_a}% i: %{_i}% i2: %{_i2}%")
 		remove 1 of {complessed_%{_i}%} from {_p}'s inventory
 		#!空きなかったらその時点で解凍が中断されるので残りの圧縮されたアイテムはスキップされる
 		#TODO: はよ直せ
