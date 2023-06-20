@@ -36,13 +36,13 @@ on load:
 	send "&eCompress&bV2 ({@version})" to console
 	send "Created by ringoXD" to console
 	send "Github: &bhttps://github.com/MCSV-Network/CompressV2" to console
-	send "&b=================" to 
+	send "&b=================" to console
 	send "[CompressV2] Checking Updates..." to console
 	set {_v} to text from url "{@cpv2api}"
 	if {_v} is not set:
 		send "[CompressV2] Failed to check new version! Check internet connection." to console
 		stop
-	if {_v} = "{@Version}":
+	if {_v} = {@Version}:
 		send "[CompressV2] No updates aviliable." to console
 	else:
 		send "[ComprssV2] New version aviliable! {@version} -> %{_v}%" to console
