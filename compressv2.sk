@@ -944,7 +944,7 @@ function olduncp(p: player, a: number, i: text, i2: text):
 			send "&cError! インベントリの空きがありません!解凍が中断されました!" to {_p}
 			delete {cpv2.invlock.%{_p}%}
 			stop
-		give {_num} of {_i2} to {_p}
+		give 64 of {_i2} to {_p}
 		wait a tick
 #!=======[FUNCTION]=======
 
