@@ -42,7 +42,7 @@ on load:
 	if {_v} is not set:
 		send "[CompressV2] Failed to check new version! Check internet connection." to console
 		stop
-	if {_v} = {@Version}:
+	if {_v} = {@version}:
 		send "[CompressV2] No updates aviliable." to console
 	else:
 		send "[ComprssV2] New version aviliable! {@version} -> %{_v}%" to console
