@@ -908,10 +908,7 @@ function uncpv2check(p: player, i: text):
 		debug({_p}, "check old compress item")
 		set {_n2} to amount of {complessed_%{_uncp.item}%} in {_p}'s inventory
 		debug({_p}, "amount: %{_n2}%")
-		if {_n2} is set:
-			debug({_p}, "before: %{_n}%")
-			add {_n2} to {_n}
-			debug({_p}, "after: %{_n}%")
+		olduncp({_p}, {_n2}, {_uncp.item})
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
 		#?fix ender pearl amount
@@ -937,6 +934,18 @@ function uncpv2check(p: player, i: text):
 		#invlock解除
 		delete {cpv2.invlock.%{_p}%}
 		stop
+
+function olduncp(p: player, a: number, i: text):
+	loop {_a} times:
+		remove 1 of {complessed_%{_i}%} from {_p}'s inventory
+		#!空きなかったらその時点で解凍が中断されるので残りの圧縮されたアイテムはスキップされる
+		#TODO: はよ直せ
+		if {_p} doesn't have enough space for 64 of stone:
+			send "&cError! インベントリの空きがありません!解凍が中断されました!" to {_p}
+			delete {cpv2.invlock.%{_p}%}
+			stop
+		give {_num} of {_uncp.item2} to {_p}
+		wait a tick
 #!=======[FUNCTION]=======
 
 
