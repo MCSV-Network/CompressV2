@@ -908,12 +908,8 @@ function uncpv2check(p: player, i: text):
 		debug({_p}, "check old compress item")
 		set {_n2} to amount of {complessed_%{_uncp.item}%} in {_p}'s inventory
 		debug({_p}, "amount: %{_n2}%")
-		if {_uncp.item} is "bone":
-			set {_tmp.i2} to "bone" parsed as itemtype
-		if {_uncp.item} is "blaze_rod":
-			set {_tmp.i2} to "blaze rod" parsed as itemtype
-		debug({_p}, "%{_tmp.i2}% / %{_uncp.item2}%")
-		olduncp({_p}, {_n2}, {_uncp.item}, {_tmp.i2})
+		debug({_p}, "i2: %{_uncp.item2}%")
+		olduncp({_p}, {_n2}, {_uncp.item}, "%{_uncp.item2}%")
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
 		#?fix ender pearl amount
