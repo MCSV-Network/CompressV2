@@ -897,6 +897,14 @@ function uncpv2check(p: player, i: text):
 	set {_tmp.item} to sunflower named "&e解凍中..."
 	set 1st line of lore of {_tmp.item} to "&cERROR! (Code issue)"
 	set {_n} to amount of {compressed_%{_uncp.item}%} in {_p}'s inventory
+	if {_uncp.item} is "bone" or "blaze_rod":
+		debug({_p}, "check old compress item")
+		set {_n2} to amount of {complessed_%{_uncp.item}%} in {_p}'s inventory
+		debug({_p}, "amount: %{_n2}%")
+		if {_n2} is set:
+			debug({_p}, "before: %{_n}%")
+			add {_n2} to {_n}
+			debug({_p}, "after: %{_n}%")
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
 		#?fix ender pearl amount
