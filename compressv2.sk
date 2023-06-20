@@ -912,6 +912,7 @@ function uncpv2check(p: player, i: text):
 			set {_tmp.i2} to "bone" parsed as itemtype
 		if {_uncp.item} is "blaze_rod":
 			set {_tmp.i2} to "blaze rod" parsed as itemtype
+		debug({_p}, "%{_tmp.i2}% / %{_uncp.item2}%")
 		olduncp({_p}, {_n2}, {_uncp.item}, {_tmp.i2})
 	if {_n} >= 1:
 		set {_tmp.amount} to {_n} * 64
@@ -942,8 +943,8 @@ function uncpv2check(p: player, i: text):
 		stop
 
 function olduncp(p: player, a: number, i: text, i2: text):
+	debug({_p}, "a: %{_a}% i: %{_i}% i2: %{_i2}%")
 	loop {_a} times:
-		debug({_p}, "a: %{_a}% i: %{_i}% i2: %{_i2}%")
 		remove 1 of {complessed_%{_i}%} from {_p}'s inventory
 		#!空きなかったらその時点で解凍が中断されるので残りの圧縮されたアイテムはスキップされる
 		#TODO: はよ直せ
