@@ -58,6 +58,16 @@ on join:
 			send "&c{@version} &e-> &a%{cpv2.latest}%"
 			send "&eDownload: &bhttps://github.com/MCSV-Network/CompressV2/"
 
+command /cpv2itemupdate:
+	trigger:
+		set {_dripstone} to firework charge named "&x&D&1&B&0&7&D&l圧縮された鍾乳石"
+		set {_n} to amount of {_dripstone} in player's inventory
+		debug(player, {_n})
+		loop {_n} times:
+			remove 1 of {_dripstone} from player's inventory
+			give {_n} of {compressed_dripstone_block} to player
+			wait a tick
+		send "%{cpv2.prefix}%&a%{_n}%個の&x&D&1&B&0&7&D&l圧縮された鍾乳石&aを変換しました!"
 
 #?For CommandPanels plugin
 command /compressv2gui:
