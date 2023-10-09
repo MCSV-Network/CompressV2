@@ -65,9 +65,9 @@ command /cpv2itemupdate:
 		debug(player, {_n})
 		loop {_n} times:
 			remove 1 of {_dripstone} from player's inventory
-			give {_n} of {compressed_dripstone_block} to player
+			give 1 of {compressed_dripstone_block} to player
 			wait a tick
-		send "%{cpv2.prefix}%&a%{_n}%個の&x&D&1&B&0&7&D&l圧縮された鍾乳石&aを変換しました!"
+		send "%{cpv2.prefix}%&a%{_n}%個の&x&D&1&B&0&7&D&l圧縮された鍾乳石&aを変換しました。"
 
 #?For CommandPanels plugin
 command /compressv2gui:
