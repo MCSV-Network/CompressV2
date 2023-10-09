@@ -4,7 +4,7 @@
 Variables:
 	{cpv2.prefix} = "&e[&bCOMPRESS-V2&e]&r"
 options:
-	version: 2.61
+	version: 2.62
 	cpv2api: https://github.com/MCSV-Network/CompressV2/raw/main/cpv2version.txt
 
 #*変数追加用
