@@ -47,7 +47,7 @@ on load:
 		delete {cpv2.update}
 		delete {cpv2.latest}
 	else:
-		send "[ComprssV2] New version aviliable! {@version} -> %{_v}%" to console
+		send "[CompressV2] New version aviliable! {@version} -> %{_v}%" to console
 		set {cpv2.update} to true
 		set {cpv2.latest} to {_v}
 		send "Download: https://github.com/MCSV-Network/CompressV2/" to console	
